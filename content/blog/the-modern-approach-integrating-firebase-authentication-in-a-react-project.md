@@ -455,6 +455,7 @@ To address this, we'll create two new components: `ProtectedRoute` and `Unprotec
 
 In the `Protected` component, we use the `useContext` hook to access the `AuthContext`. If the user is not authenticated, we use the `Navigate` component from `react-router-dom` to redirect them to the login page, preserving the current location with the `state` prop.
 
+{% raw %}
 ```javascript
 /* src/Protected.jsx */
 import { useContext } from "react";
@@ -474,6 +475,7 @@ function Protected({ children }) {
 
 export default Protected;
 ```
+{% endraw %}
 
 Similarly, in the `Unprotected` component, we use the `useContext` hook to access the `AuthContext`. If the user is already authenticated, we use `Navigate` to redirect them to the home page.
 

@@ -3,7 +3,7 @@ title: How UBC's How to Code Course Transformed My Approach to Programming
 date: 2023-02-27
 tags: 
   - review
-  - functional-programming
+  - functional programming
   - ossu
 ---
 

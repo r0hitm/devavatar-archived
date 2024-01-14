@@ -4,7 +4,6 @@ date: 2023-03-29
 tags: 
    - ai
    - chatgpt
-   - social-impact
 ---
 
 Recently, we've seen a boom in AI technologies, especially large language models (LLMs). This is a revolutionary period for humanity that we're living through. The world is entering a new era: the age of AI. So, what is it exactly? Well, contrary to its name, artificial intelligence is actually pretty limited. Most contemporary AI is being trained on a vast amount of text data from the internet using deep learning techniques, specifically the transformer architecture in the case of ChatGPT. Given a prompt, it generates a natural language response based on patterns and rules that it "learned" during its training phase. And this process mostly involves predicting the next word in the pattern most effectively.

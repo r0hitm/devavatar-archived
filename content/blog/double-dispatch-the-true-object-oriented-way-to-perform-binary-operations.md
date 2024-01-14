@@ -3,7 +3,7 @@ title: "Double Dispatch: The True Object-Oriented Way to Perform Binary Operatio
 date: 2023-05-07
 tags: 
   - programming blog
-  - Object Oriented Programming
+  - object oriented programming
   - visitor pattern
 ---
 

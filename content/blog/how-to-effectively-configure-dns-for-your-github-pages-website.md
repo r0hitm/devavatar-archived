@@ -4,7 +4,7 @@ description: A step-by-step guide to setting up a custom domain name with GitHub
 date: 2023-02-11
 tags: 
   - dns
-  - web-development
+  - web development
   - jamstack
 ---
 

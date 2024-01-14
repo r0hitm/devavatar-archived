@@ -1,11 +1,11 @@
 ---
-title: "My First Hackathon Experience at HackCBS 6.0"
-datePublished: Tue Nov 28 2023 14:43:59 GMT+0000 (Coordinated Universal Time)
-cuid: clpig7xl7000408jx4ult5i0n
-slug: my-first-hackathon-experience-at-hackcbs-60
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1701103390707/4af04160-1c23-4a60-b693-f9f72f860082.png
-tags: hackathon, web-development, reactjs, logging, experience, appwrite
-
+title: My First Hackathon Experience at HackCBS 6.0
+date: 2023-11-28
+tags: 
+  - review
+  - experience
+  - hackathon
+  - web development
 ---
 
 Earlier this month, I had the incredible opportunity to attend HackCBS 6.0, India's largest student-run hackathon. In this blog post, I want to share my experience from the moment I registered to the final day of the event.
