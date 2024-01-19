@@ -3,34 +3,23 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Hi, I'm Rohit! I'm currently 3rd year BSc (Hons) Electronics student with a fervor for computers and technology ever since high school. My journey involves self-studying Computer Science through programs [OSSU](https://github.com/ossu/computer-science) and [The Odin Project](https://theodinproject.com/). I am driven by a curiosity that compels me to experiment with and explore technology continually.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+My favorite thing about this field is the delightful combination of creativity and real-world problem-solving—a unique blend that keeps me engaged and motivated.
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+### Skills
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+- **Programming Languages:** TypeScript, JavaScript, HTML5, CSS, Python
+- **Libraries & Frameworks:** React, Django, Flask, Tailwind CSS, Bootstrap
+- **Databases:** SQLite, Firebase, Appwrite
+- **Version Control:** Git, GitHub
+- **Operating Systems:** Linux, Windows
+- **Editors:** VS Code, Neovim (Vim)
+- **UI/UX:** Figma, GIMP
 
-## Tech Stack
+### Recent Projects
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+- Recently, I created a web application using React and Appwrite for tracking subscriptions, developed within a hackathon I participated in two months ago.
+- Another notable project is a todo app using React, TypeScript and Firebase.
 
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+Both applications use the modern v6 syntax for the react-router and custom hooks around Appwrite and firebase for better code organization.
