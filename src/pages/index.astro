@@ -41,12 +41,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        If you're coming from my old blog, code-culture.codes, welcome! All the
+        old posts have been migrated here, and the old site has been taken down.
+        However, this site is still a work in progress, so please bear with me
+        as I get things up and running. If you have any questions, or if you
+        find any issues, please reach out, I'd love to hear from you.
       </p>
-      <p>
+      {
+        /*<p>
         Read the blog posts or check
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
@@ -54,7 +56,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         >
           README
         </LinkButton> for more info.
-      </p>
+      </p>  */
+      }
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
