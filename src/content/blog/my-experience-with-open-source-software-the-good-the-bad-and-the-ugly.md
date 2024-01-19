@@ -6,6 +6,8 @@ tags:
   - review
 ---
 
+## Table of Contents
+
 Free and Open-Source Software (FOSS) is an incredibly powerful concept that has changed the software landscape for the better. FOSS provides users with access to software that is not only free, but also allows for the inspection and modification of its source code, giving users a high level of control. The FOSS community is also quite robust, with Linux being a prime example of a large and thriving community.
 
 FOSS has become ubiquitous in our lives, with many of us having used FOSS at least once. There are many examples of great FOSS alternatives to paid options, such as LibreOffice, GIMP, and Blender. In fact, Blender has become so good in recent years that it has become an industry standard in the 3D modeling space. FOSS is functional, highly customizable, and easy to modify or extend its abilities. Additionally, if the original developers stop development, the FOSS community can keep the software alive.

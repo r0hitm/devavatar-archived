@@ -6,6 +6,8 @@ tags:
   - tutorial
 ---
 
+## Table of Contents
+
 [Obsidian](https://obsidian.md/) is more than just a note-taking app—it's a powerful tool for organizing your thoughts and ideas. In this blog post, I'll be sharing my personal setup for syncing Obsidian notes between multiple devices (except iPhone) using Git and GitHub. Note that I'll assume that you're already familiar with Git and GitHub. So, let's dive in!
 
 ## Desktop (PC or Mac)

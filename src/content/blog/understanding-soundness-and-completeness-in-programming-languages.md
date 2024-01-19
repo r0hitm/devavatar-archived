@@ -6,6 +6,8 @@ tags:
   - programming
 ---
 
+## Table of Contents
+
 In this blog post, I'll share what I learned about the concept of soundness and completeness while completing the MOOC [Programming Languages, Part B](https://www.coursera.org/learn/programming-languages-part-b).
 
 ## What is Static Checking?

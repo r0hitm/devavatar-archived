@@ -7,6 +7,8 @@ tags:
   - programming
 ---
 
+## Table of Contents
+
 > **"You should not have a favorite weapon. To become over-familiar with one weapon is as much a fault as not knowing it sufficiently well."**
 >
 > \- Miyamoto Musashi

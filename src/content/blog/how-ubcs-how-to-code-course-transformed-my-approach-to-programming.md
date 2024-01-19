@@ -6,6 +6,8 @@ tags:
   - review
 ---
 
+## Table of Contents
+
 [How to Code Simple Data](https://www.edx.org/course/how-to-code-simple-data) and [How to Code Complex Data](https://www.edx.org/course/how-to-code-complex-data) is a two part MOOC that focuses on teaching a systematic programming method rather than a programming language. This course is based on the book [How to Design Programs](https://htdp.org/2022-8-7/Book/index.html). I completed the course last month. In this blog post, I will write about my experience, and how it changed the way I approach programming problems now.
 
 ## My Experience

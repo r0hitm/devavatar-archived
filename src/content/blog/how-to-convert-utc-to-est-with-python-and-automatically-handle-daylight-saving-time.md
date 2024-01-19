@@ -7,6 +7,8 @@ tags:
   - python
 ---
 
+## Table of Contents
+
 Converting between timezones may seem like a straightforward task involving the calculation of the time difference between a location and UTC. However, this is not the case because firstly, timezones are not uniformly divided, and secondly, the daylight saving time (DST) adds further complexity to the process, as it varies depending on the time of the year and location.
 
 In this post, we will learn how to convert UTC time to EST (Eastern Standard Time). We will also take care of daylight saving automatically.

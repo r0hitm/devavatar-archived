@@ -6,6 +6,8 @@ tags:
   - tutorial
 ---
 
+## Table of Contents
+
 As a developer, you likely have a set of configuration files, or "dotfiles," that you use to customize your development environment. These dotfiles can range from your `.bashrc` file to your Vim configuration and custom aliases.
 
 Managing dotfiles can be a hassle, especially when you have multiple machines or need to set up a new one. That's where GNU Stow comes in. It's a symlink farm manager that simplifies dotfile management by creating symlinks from your dotfiles directory to your home directory.

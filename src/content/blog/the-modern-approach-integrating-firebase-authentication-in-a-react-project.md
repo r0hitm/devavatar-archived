@@ -7,6 +7,8 @@ tags:
   - web
 ---
 
+## Table of Contents
+
 Firebase is one of the most popular Backend-as-a-Service solutions for frontend applications, providing a range of functionalities like authentication, database management, and more. Last week, I wanted to add authentication and cloud sync functionality to one of my old projects, which I made in vanilla JS while following [The Odin Project](https://www.theodinproject.com/). Instead of just doing just that, I decided to redo that project in React and it was here that I encountered some challenges, especially when it came to finding resources that utilized the recommended `createBrowserRouter` from React Router v6.4. Additionally, the Firebase documentation wasn't the most user-friendly (though it did bring out a few laughs!), and asking AI tools led me astray and wasted three whole days of my time (Lesson learned: Don't trust AI tools).
 
 Determined not to be defeated, I decided to embark on a mini-project, using React, React Router, and the Firebase Modular API syntax to experiment and design an authentication solution that I want. Finally, after two days of perseverance, I succeeded!

@@ -7,6 +7,8 @@ tags:
   - oop
 ---
 
+## Table of Contents
+
 In object-oriented programming (OOP), binary operations involve performing operations on two objects of different classes. Suppose we have two classes and there is some method, say `add`, that can add two objects of the same class. Now, suppose we want to extend the `add` class such that these two classes can be added together. However, passing the second class to `add` will not work correctly and might have different properties that `add` didn't account for. So how do we do this?
 
 Trivial way of doing this would be to use methods (such as `is_a?` in ruby) to determine the class of the argument and do the appropriate action. But doing so would be cheating as then it will not be OOP but rather functional style. Why? Because being OOP, objects should "know how to perform the required operation on themselves with another value". In other words, the responsibility of performing an operation should lie with the object itself, rather than being determined by external conditions. This is where double dispatch comes in, allowing objects to interact with each other in a truly object-oriented way.

@@ -6,6 +6,8 @@ tags:
   - programming
 ---
 
+## Table of Contents
+
 Subtyping is a fundamental concept in statically typed programming languages. It refers to the ability of a type to be used in place of another type. That is, if `t1` is a subtype of `t2` then `t1` must be usable in every way `t2` is. This is called **Principle of Substitutability**. It is a fundamental concept that provides flexibility in statically typed programming languages, and it is used to achieve polymorphism.
 
 ## Subtyping Rules

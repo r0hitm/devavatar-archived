@@ -8,6 +8,8 @@ tags:
   - web
 ---
 
+## Table of Contents
+
 Earlier this month, I had the incredible opportunity to attend HackCBS 6.0, India's largest student-run hackathon. In this blog post, I want to share my experience from the moment I registered to the final day of the event.
 
 ## Discovering the Event
