@@ -7,8 +7,6 @@ tags:
   - web
 ---
 
-## Table of Contents
-
 GitHub Pages is a great platform for hosting your website for free. However, the default URL for a GitHub Pages site is a subdomain of [GitHub.com](http://GitHub.com), which may not be suitable for everyone. In this tutorial, we will go over how to buy and set up a custom domain name with GitHub Pages using a domain name system (DNS).
 
 **Step 1**: Buy a Domain Name
