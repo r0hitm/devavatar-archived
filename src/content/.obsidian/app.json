@@ -4,5 +4,7 @@
   "useMarkdownLinks": true,
   "attachmentFolderPath": "../assets/",
   "showUnsupportedFiles": false,
-  "userIgnoreFilters": ["_astro-paper-notes/", "_templates/"]
+  "userIgnoreFilters": ["_astro-paper-notes/", "_templates/"],
+  "defaultViewMode": "preview",
+  "livePreview": false
 }
