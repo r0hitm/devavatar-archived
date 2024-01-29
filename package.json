@@ -1,6 +1,6 @@
 {
-  "name": "devavatar-new",
-  "version": "4.1.0",
+  "name": "devavatar",
+  "version": "1.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
