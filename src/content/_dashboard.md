@@ -1,3 +1,12 @@
+> [!caution] Not auto-git syncing
+> DO a manual git commit after making changes!
+>
+> ```sh
+> cd d:\paths\devavatar\
+> # git add .
+> # git commit -m "new post"
+> ```
+
 ## Drafts
 
 ```dataview
