@@ -35,11 +35,11 @@ pnpm-debug.log*
 .pnp.*
 
 # Obsidian stuff to ignore
-.obsidian/workspace-mobile.json
-.obsidian/workspace.json
-.obsidian/workspaces.json
-.obsidian/graph.json
-.obsidian/cache
-.trash/
+src/content/.obsidian/workspace-mobile.json
+src/content/.obsidian/workspace.json
+src/content/.obsidian/workspaces.json
+src/content/.obsidian/graph.json
+src/content/.obsidian/cache
+src/content/.trash/
 **/Untitled.md
 
