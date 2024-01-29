@@ -1,0 +1,8 @@
+{
+  "autoConvertHtml": true,
+  "vimMode": true,
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "../assets/",
+  "showUnsupportedFiles": false,
+  "userIgnoreFilters": ["_astro-paper-notes/", "_templates/"]
+}
