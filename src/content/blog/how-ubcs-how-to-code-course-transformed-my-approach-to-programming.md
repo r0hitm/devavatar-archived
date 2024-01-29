@@ -1,9 +1,10 @@
 ---
 title: "How UBC's How to Code Course Transformed My Approach to Programming"
-description: "My experience with UBC's How to Code course and how it changed the way I approach programming problems now."
+description: "My experience with UBC's How to Code course and how it changed the way I approach programming problems now. The point isn't to learn a language. The point is to learn a programming paradigm that transcends language entirely."
 pubDatetime: 2023-02-27T00:00:00.000Z
 tags:
   - review
+  - programming
 ---
 
 ## Table of Contents
@@ -42,7 +43,7 @@ I soon fell in love with the language and the design recipes (using the words of
 
 Plus, the fact that BSL has an inbuilt capability to write tests that makes the development a very pleasant experience than in most other languages. Sure, you can use a testing framework but it'll be slow and requires extra setup, and in most cases, somewhat different syntax.
 
-### Conclusion
+## Conclusion
 
 By the end of it, I have built programs to render BSTs, solve simple mazes, n-queens etc. including interactive programs like Space Invader as a final project for the part 1. Most of the things that I learned are quite easy to transfer to other programming languages especially the functional stuff. You can play the [Snake Game](https://avatar-hiro.itch.io/simple-snake) that I made for practice on itch.io.
 

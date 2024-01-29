@@ -1,7 +1,8 @@
 ---
 title: "The Modern Approach: Integrating Firebase Authentication in a React Project"
-description: A step-by-step guide to integrating Firebase authentication in a React project
+description: Explore a comprehensive tutorial on seamlessly incorporating Firebase authentication into a React project, leveraging the contemporary Firebase SDK syntax. Transition from the previous class-like pattern to a functional approach for enhanced bundle size reduction through features like tree-shaking. Uncover the intricacies of this newer syntax, which, despite its benefits, lacks extensive documentation and available resources on the internet at the time of writing.
 pubDatetime: 2023-07-09T00:00:00.000Z
+modDatetime: 2024-01-29T11:47:32.924Z
 tags:
   - tutorial
   - web
@@ -49,7 +50,7 @@ npm install firebase
 
 7. Now to use the email/password provider for the authentication, we will require the following functions from `firebase/auth`: `getAuth`, `createUserWithEmailAndPassword`, `signInWithEmailAndPassword`, `sendPasswordResetEmail`, and `signOut`.
 
-```javascript
+```js
 /* firebase.js */
 import { initializeApp } from "firebase/app";
 import {
@@ -109,7 +110,7 @@ export { auth, register, login, resetPassword, logout };
 
 Let's now proceed to write a custom hook that will help us keep track of the user's authentication status. This custom hook will utilize Firebase's `onAuthStateChanged` function. The `onAuthStateChanged` function takes a callback function as its second argument, which will be triggered by the authentication service whenever the user's authentication state changes.
 
-```javascript
+```js
 /* src/hooks/useAuth.js */
 import { useState, useEffect } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
@@ -163,7 +164,7 @@ Keep in mind that the code for each of these routes will be straightforward, as 
 
 With the route components in place, we can proceed to implement the necessary logic and connect them to the appropriate Firebase functionality in the upcoming sections. Here are the route components from my mini-project for reference:
 
-```javascript
+```jsx
 /* src/routes/Login.jsx */
 import { Form, Link } from "react-router-dom";
 
@@ -195,7 +196,7 @@ export default function Login() {
 }
 ```
 
-```javascript
+```jsx
 /* src/routes/Register.jsx */
 import { Form, Link } from "react-router-dom";
 
@@ -233,7 +234,7 @@ export default function Register() {
 }
 ```
 
-```javascript
+```jsx
 /* src/routes/ResetPassword.jsx */
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -242,56 +243,56 @@ import { resetPassword } from "../firebase";
 const MINUTE = 60 * 1000;
 
 export default function ResetPassword() {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    return (
-        <div className="reset-password">
-            <h1>Reset Password</h1>
-            <form
-                method="POST"
-                onSubmit={async e => {
-                    e.preventDefault();
-                    setCount(MINUTE);
-                    const interval = setInterval(() => {
-                        setCount(count => count - 1000);
-                    }, 1000);
-                    setTimeout(() => {
-                        clearInterval(interval);
-                        setCount(0);
-                    }, MINUTE);
+  return (
+    <div className="reset-password">
+      <h1>Reset Password</h1>
+      <form
+        method="POST"
+        onSubmit={async e => {
+          e.preventDefault();
+          setCount(MINUTE);
+          const interval = setInterval(() => {
+            setCount(count => count - 1000);
+          }, 1000);
+          setTimeout(() => {
+            clearInterval(interval);
+            setCount(0);
+          }, MINUTE);
 
-                    const email = (e.target as HTMLFormElement).email.value;
-                    try {
-                        console.log("Resetting password...");
-                        await resetPassword(email);
-                        alert("Check your email to reset your password!");
-                    } catch (err) {
-                        console.error(err);
-                        alert(
-                            "Error sending password reset email. Make sure you entered your email correctly."
-                        );
-                    }
-                }}
-            >
-                <div className="form-field">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="email" required />
-                </div>
-                <div className="form-field">
-                    <button type="submit" disabled={count > 0}>
-                        Send Password Reset Link
-                    </button>
-                    <p>
-                        Wait {Math.floor(count / 1000)} seconds before sending
-                        another email.
-                    </p>
-                    <p>
-                        Resetted your password? <Link to="/login">Login</Link>
-                    </p>
-                </div>
-            </form>
+          const email = e.target.email.value;
+          try {
+            console.log("Resetting password...");
+            await resetPassword(email);
+            alert("Check your email to reset your password!");
+          } catch (err) {
+            console.error(err);
+            alert(
+              "Error sending password reset email. Make sure you entered your email correctly."
+            );
+          }
+        }}
+      >
+        <div className="form-field">
+          <label htmlFor="email">Email</label>
+          <input type="email" name="email" id="email" required />
         </div>
-    );
+        <div className="form-field">
+          <button type="submit" disabled={count > 0}>
+            Send Password Reset Link
+          </button>
+          <p>
+            Wait {Math.floor(count / 1000)} seconds before sending another
+            email.
+          </p>
+          <p>
+            Resetted your password? <Link to="/login">Login</Link>
+          </p>
+        </div>
+      </form>
+    </div>
+  );
 }
 ```
 
@@ -305,7 +306,7 @@ To set up routing in our application, we will use `createBrowserRouter` from `re
 
 In `src/main.js`:
 
-```javascript
+```js
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -319,38 +320,37 @@ import ResetPassword from "./routes/ResetPassword.jsx";
 // See the next paragraph for explaination of this line
 import { registerAction, loginAction } from "./actions.js";
 
-const router = createBrowserRouter(
-    [
-        {
-            path: "/",
-            element: <App />
-        },
-        {
-            path: "/login",
-            element: <Login />,
-            action: loginAction,
-        },
-        {
-            path: "/register",
-            element: <Register />,
-            action: registerAction,
-        },
-        {
-            path: "/reset-password",
-            element: <ResetPassword />,
-        },
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    action: loginAction,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+    action: registerAction,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
 ```
 
 In the provided code, the `actions.js` file contains asynchronous functions that are executed when a [Form](https://reactrouter.com/en/main/components/form) is submitted on a specific route. These functions handle user login and registration logic by taking user input from the form and calling the appropriate functions from `firebase.js`.
 
-```javascript
+```js
 /* actions.js */
 import { redirect } from "react-router-dom";
 import { register, login } from "./firebase";
@@ -386,7 +386,7 @@ Now, we need to protect our `<App />` route to prevent users from accessing the 
 
 Create `src/AuthContext.js` and `src/AuthProvider.jsx`:
 
-```javascript
+```js
 /* src/AuthContext.js */
 import { createContext } from "react";
 
@@ -395,19 +395,19 @@ const AuthContext = createContext(null);
 export default AuthContext;
 ```
 
-```javascript
+```jsx
 /* src/AuthProvider.jsx */
 import AuthContext from "./AuthContext";
 import { useAuth } from "./hooks/useAuth"; // Our Custom hook
 
-export default function AuthProvider({ children }: { children: any }) {
-    const { user, loading } = useAuth();
+export default function AuthProvider({ children }) {
+  const { user, loading } = useAuth();
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-    return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 }
 ```
 
@@ -415,7 +415,7 @@ The `AuthProvider` component wraps our application and provides access to the au
 
 In `main.js`, we need to update our code to include the `AuthProvider`:
 
-```javascript
+```js
 // ... rest of the imports
 import AuthProvider from "./AuthProvider.jsx";
 
@@ -442,7 +442,7 @@ To address this, we'll create two new components: `ProtectedRoute` and `Unprotec
 
 In the `Protected` component, we use the `useContext` hook to access the `AuthContext`. If the user is not authenticated, we use the `Navigate` component from `react-router-dom` to redirect them to the login page, preserving the current location with the `state` prop.
 
-```javascript
+```jsx
 /* src/Protected.jsx */
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
@@ -464,7 +464,7 @@ export default Protected;
 
 Similarly, in the `Unprotected` component, we use the `useContext` hook to access the `AuthContext`. If the user is already authenticated, we use `Navigate` to redirect them to the home page.
 
-```javascript
+```jsx
 /* src/Unprotected.jsx */
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
@@ -485,7 +485,7 @@ export default Unprotected;
 
 Finally, in the `main.js` file, we import the `Protected` and `Unprotected` components. We wrap the `<App />` route with the `Protected` component to ensure it is only accessible to authenticated users. Similarly, we wrap the `Login`, `Register`, and `ResetPassword` routes with the `Unprotected` components prevent authenticated users from accessing those routes.
 
-```javascript
+```js
 // ... rest of imports
 import Protected from "./Protected.jsx";
 import Unprotected from "./Unprotected.jsx";
@@ -535,7 +535,7 @@ const router = createBrowserRouter([
 
 To implement the logout functionality in our application, we can add a button that triggers the `logout` function that we wrote in `firebase.js`. This is a simple step that allows users to log out of the application.
 
-```javascript
+```js
 /* src/routes/App.js */
 // ...rest of imports
 import { logout } from "../firebase";

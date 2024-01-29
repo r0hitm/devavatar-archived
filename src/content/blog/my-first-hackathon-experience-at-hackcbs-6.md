@@ -1,6 +1,6 @@
 ---
 title: My First Hackathon Experience at HackCBS 6.0
-description: My experience at HackCBS 6.0, India's largest student-run hackathon.
+description: Earlier this month, I had the incredible opportunity to attend HackCBS 6.0, India largest student-run hackathon, which was also my first ever hackathon. In this blog post, I want to share my experience from the moment I registered to the final day of the event.
 pubDatetime: 2023-11-28T00:00:00.000Z
 tags:
   - review

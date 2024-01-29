@@ -1,12 +1,11 @@
 ---
 title: "Beyond the Hype: How ChatGPT and AI Could Actually Make Us Smarter"
-description: "AI is a revolutionary technology that has the potential to make us smarter, but it's also important to be careful and mindful of its limitations and potential pitfalls."
+description: Recently, we have seen a boom in AI technologies, especially large language models (LLMs). This is a revolutionary period for humanity that we are living through. The world is entering a new era the age of AI. So, what is it exactly? Well, contrary to its name, artificial intelligence is actually pretty limited. But that does not mean it cannot benefit us.
 pubDatetime: 2023-03-29T00:00:00.000Z
-featured: false
-draft: false
+modDatetime: 2024-01-29T11:14:58.916Z
 tags:
+  - opinion
   - ai
-  - chatgpt
 ---
 
 ## Table of Contents

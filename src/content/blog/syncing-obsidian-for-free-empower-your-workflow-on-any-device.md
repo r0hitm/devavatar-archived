@@ -1,6 +1,6 @@
 ---
 title: "Syncing Obsidian for Free: Empower Your Workflow on Any Device"
-description: Sync your Obsidian notes between multiple devices for free using Git and GitHub
+description: My setup to sync Obsidian notes between multiple devices using Git and GitHub.
 pubDatetime: 2023-06-07T00:00:00.000Z
 tags:
   - tutorial

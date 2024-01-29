@@ -1,6 +1,6 @@
 ---
 title: How to Effectively Configure DNS for Your GitHub Pages Website
-description: A step-by-step guide to setting up a custom domain name with GitHub Pages using a domain name system (DNS).
+description: GitHub Pages is a great platform for hosting your website for free. However, the default URL for a GitHub Pages site is a subdomain of GitHub.com, which may not be suitable or desirable for everyone. In this tutorial, we will go over how to buy and set up a custom domain name with GitHub Pages using a domain name system (DNS).
 pubDatetime: 2023-02-11T00:00:00.000Z
 tags:
   - tutorial
