@@ -6,5 +6,6 @@
   "showUnsupportedFiles": false,
   "userIgnoreFilters": ["_astro-paper-notes/", "_templates/"],
   "defaultViewMode": "preview",
-  "livePreview": false
+  "livePreview": false,
+  "showLineNumber": true
 }
