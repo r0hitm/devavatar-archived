@@ -15,8 +15,8 @@ const { noMarginTop = false } = Astro.props;
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
   <Hr noPadding />
   <div class="footer-wrapper">
-    <Sponsor showRss />
-    <Socials centered />
+    <Sponsor />
+    <Socials centered showRss />
     <div class="footer-links">
       <!-- For some reasons these three elements have a space b/w them -_- (workaround for now to have pipes render correctly) -->
       <a href="#">Credits</a>&nbsp;|
