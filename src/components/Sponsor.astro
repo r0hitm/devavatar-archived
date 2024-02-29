@@ -19,7 +19,7 @@ const bmc_img_link =
 
 <!-- html -->
 <div class="sponsors">
-  <button class="gh-sponsor" type="button">
+  <a class="gh-sponsor" href="https://github.com/sponsors/r0hitm">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="icon-tabler"
@@ -30,7 +30,7 @@ const bmc_img_link =
       ></path>
     </svg>
     Sponsor
-  </button>
+  </a>
   &nbsp;&nbsp;
   <a href="https://www.buymeacoffee.com/r0hitm">
     <img class="bmc-img" src={bmc_img_link} alt="Buy Me a Coffee Button" />
@@ -42,7 +42,7 @@ const bmc_img_link =
     @apply flex items-center justify-between mb-3;
   }
   .sponsors > * {
-    @apply inline-block rounded-lg opacity-90;
+    @apply inline-block rounded-lg opacity-90 hover:rotate-3;
   }
   .bmc-img {
     @apply aspect-auto h-9 rounded-lg;
