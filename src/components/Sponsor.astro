@@ -1,0 +1,56 @@
+---
+const bmc_text = "Buy me a cofee";
+const bmc_button_color = "ff813f";
+const bmc_font_color = "fff";
+const bmc_font = "Comic";
+const bmc_outline_color = "000";
+const bmc_coffee_color = "D2B04C";
+
+const bmc_img_link =
+  "https://img.buymeacoffee.com/button-api/" +
+  `?text=${bmc_text}` +
+  `&emoji=&slug=r0hitm` +
+  `&button_colour=${bmc_button_color}` +
+  `&font_colour=${bmc_font_color}` +
+  `&font_family=${bmc_font}` +
+  `&outline_colour=${bmc_outline_color}` +
+  `&coffee_colour=${bmc_coffee_color}`;
+---
+
+<!-- html -->
+<div class="sponsors">
+  <button class="gh-sponsor" type="button">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon-tabler"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+        d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+      ></path>
+    </svg>
+    Sponsor
+  </button>
+  &nbsp;&nbsp;
+  <a href="https://www.buymeacoffee.com/r0hitm">
+    <img class="bmc-img" src={bmc_img_link} alt="Buy Me a Coffee Button" />
+  </a>
+</div>
+
+<style>
+  .sponsors {
+    @apply flex items-center justify-between mb-3;
+  }
+  .sponsors > * {
+    @apply inline-block rounded-lg opacity-90;
+  }
+  .bmc-img {
+    @apply aspect-auto h-9 rounded-lg;
+  }
+  .gh-sponsor {
+    @apply flex h-9 w-36 items-center justify-evenly border border-skin-line bg-skin-card px-4 text-sm font-semibold;
+  }
+  .gh-sponsor svg {
+    @apply stroke-[#ec4899] sm:scale-90;
+  }
+</style>
