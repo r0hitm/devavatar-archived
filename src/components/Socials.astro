@@ -18,12 +18,14 @@ const { centered = false, showRss = false } = Astro.props;
         href={social.href}
         className="link-button"
         title={social.linkTitle}
+        target="_blank"
       >
         <Fragment set:html={socialIcons[social.name]} />
         <span class="sr-only">{social.linkTitle}</span>
       </LinkButton>
     ))
   }
+  <!-- RSS Feed -->
   {
     showRss ? (
       <LinkButton
