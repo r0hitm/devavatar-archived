@@ -10,11 +10,42 @@
 ## Drafts
 
 ```dataview
-TABLE title, tags FROM "blog" WHERE draft = true
+TABLE
+  title AS "Title",
+  tags AS "Tags"
+FROM "blog"
+WHERE
+  draft = true
+SORT file.mtime DESC
+```
+
+## Scheduled
+
+```dataview
+TABLE
+  title AS "Title",
+  pubDatetime AS "Date",
+  tags AS "Tags"
+FROM "blog"
+WHERE
+  date(pubDatetime) >= date(today)
+  AND
+  draft != true
+SORT pubDatetime ASC
 ```
 
 ## Published
 
 ```dataview
-TABLE title, tags, pubDatetime, modDatetime FROM "blog" WHERE draft != true SORT pubDatetime DESC
+TABLE
+  title AS "Title",
+  tags AS "Tags",
+  pubDatetime AS "Published",
+  modDatetime AS "Modified"
+FROM "blog"
+WHERE
+  draft != true
+  AND
+  date(pubDatetime) <= date(today)
+SORT pubDatetime DESC
 ```
