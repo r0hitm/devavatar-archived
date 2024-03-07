@@ -1,7 +1,8 @@
 ---
 title: "Syncing Obsidian for Free: Empower Your Workflow on Any Device"
-description: My setup to sync Obsidian notes between multiple devices using Git and GitHub.
+description: Step-by-Step tutorial for setting up Git and GitHub to sync Obsidian notes between multiple devices for free.
 pubDatetime: 2023-06-07T00:00:00.000Z
+modDatetime: 2024-03-07T06:18:23.737Z
 tags:
   - tutorial
 ---
@@ -35,7 +36,9 @@ Assuming you have Git installed and configured with your username and email (usi
 3. Install the Obsidian Git community plugin in Obsidian. This plugin will automatically commit and push any changes you make to your GitHub repository.
 4. Adjust the commit and push frequency according to your preference in the plugin settings.
 
-Note: If like me, you have gpg commit signing enabled for all your repositories, you may want to consider disabling it specifically for your Notes vault. This is because gpg commit signing can either prevent commits (due to the lack of a TTY) or require you to enter your passphrase frequently, which can be quite inconvenient. Disable using `git config commit.gpgsign false`.
+Note 1: If like me, you have gpg commit signing enabled for all your repositories, you may want to consider disabling it specifically for your Notes vault. This is because gpg commit signing can either prevent commits (due to the lack of a TTY) or require you to enter your passphrase frequently, which can be quite inconvenient. Disable using `git config commit.gpgsign false`.
+
+Note 2: Obsidian uses LF line endings, so it might break the newline characters on devices that use different line endings (say Windows and Mac) because on Windows, git auto converts LF line endings to CRLF (windows default). If you run into this issue, make sure you disable `autocrlf` using: `git config core.autocrlf false`.
 
 ## Android
 
@@ -125,6 +128,6 @@ $ nvim ~/.shortcuts/sync.bash
 $ termux-fix-shebang ~/.shortcuts/sync.bash
 ```
 
-Now you can add Termux:Widget shortcut to your home screen to quickly run the sync script.
+Now you can add `Termux:Widget` shortcut to your home screen to quickly run the sync script.
 
 ![taking notes gif](https://media.tenor.com/hph-YFUYCvUAAAAC/my-hero-academia-izuku.gif)
