@@ -7,5 +7,6 @@
   "userIgnoreFilters": ["_astro-paper-notes/", "_templates/"],
   "defaultViewMode": "preview",
   "livePreview": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "useTab": false
 }
