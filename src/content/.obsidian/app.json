@@ -8,5 +8,7 @@
   "defaultViewMode": "preview",
   "livePreview": false,
   "showLineNumber": true,
-  "useTab": false
+  "useTab": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "blog"
 }

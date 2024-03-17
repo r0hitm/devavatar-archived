@@ -1,44 +1,44 @@
 "use strict";
-var Le = Object.create;
-var _ = Object.defineProperty;
-var xe = Object.getOwnPropertyDescriptor;
-var Ce = Object.getOwnPropertyNames;
-var Ve = Object.getPrototypeOf,
-  Re = Object.prototype.hasOwnProperty;
-var Ie = (a, t) => () => (t || a((t = { exports: {} }).exports, t), t.exports),
-  _e = (a, t) => {
-    for (var e in t) _(a, e, { get: t[e], enumerable: !0 });
+var Re = Object.create;
+var I = Object.defineProperty;
+var Ce = Object.getOwnPropertyDescriptor;
+var Ve = Object.getOwnPropertyNames;
+var _e = Object.getPrototypeOf,
+  Ie = Object.prototype.hasOwnProperty;
+var We = (a, t) => () => (t || a((t = { exports: {} }).exports, t), t.exports),
+  Ye = (a, t) => {
+    for (var e in t) I(a, e, { get: t[e], enumerable: !0 });
   },
-  ce = (a, t, e, n) => {
+  pe = (a, t, e, n) => {
     if ((t && typeof t == "object") || typeof t == "function")
-      for (let i of Ce(t))
-        !Re.call(a, i) &&
+      for (let i of Ve(t))
+        !Ie.call(a, i) &&
           i !== e &&
-          _(a, i, {
+          I(a, i, {
             get: () => t[i],
-            enumerable: !(n = xe(t, i)) || n.enumerable,
+            enumerable: !(n = Ce(t, i)) || n.enumerable,
           });
     return a;
   };
-var We = (a, t, e) => (
-    (e = a != null ? Le(Ve(a)) : {}),
-    ce(
+var Ue = (a, t, e) => (
+    (e = a != null ? Re(_e(a)) : {}),
+    pe(
       t || !a || !a.__esModule
-        ? _(e, "default", { value: a, enumerable: !0 })
+        ? I(e, "default", { value: a, enumerable: !0 })
         : e,
       a
     )
   ),
-  Ye = a => ce(_({}, "__esModule", { value: !0 }), a);
-var Fe = Ie(l => {
+  Be = a => pe(I({}, "__esModule", { value: !0 }), a);
+var Oe = We(l => {
   "use strict";
   Object.defineProperty(l, "__esModule", { value: !0 });
   var g = require("obsidian"),
-    J = "YYYY-MM-DD",
-    Z = "gggg-[W]ww",
-    me = "YYYY-MM",
-    he = "YYYY-[Q]Q",
-    fe = "YYYY";
+    X = "YYYY-MM-DD",
+    ee = "gggg-[W]ww",
+    fe = "YYYY-MM",
+    we = "YYYY-[Q]Q",
+    ye = "YYYY";
   function S(a) {
     let t = window.app.plugins.getPlugin("periodic-notes");
     return t && t.settings?.[a]?.enabled;
@@ -53,7 +53,7 @@ var Fe = Ie(l => {
           template: p,
         } = t.getPlugin("periodic-notes")?.settings?.daily || {};
         return {
-          format: o || J,
+          format: o || X,
           folder: s?.trim() || "",
           template: p?.trim() || "",
         };
@@ -64,7 +64,7 @@ var Fe = Ie(l => {
         template: i,
       } = a.getPluginById("daily-notes")?.instance?.options || {};
       return {
-        format: n || J,
+        format: n || X,
         folder: e?.trim() || "",
         template: i?.trim() || "",
       };
@@ -72,20 +72,20 @@ var Fe = Ie(l => {
       console.info("No custom daily note settings found!", a);
     }
   }
-  function H() {
+  function L() {
     try {
       let a = window.app.plugins,
         t = a.getPlugin("calendar")?.options,
         e = a.getPlugin("periodic-notes")?.settings?.weekly;
       if (S("weekly"))
         return {
-          format: e.format || Z,
+          format: e.format || ee,
           folder: e.folder?.trim() || "",
           template: e.template?.trim() || "",
         };
       let n = t || {};
       return {
-        format: n.weeklyNoteFormat || Z,
+        format: n.weeklyNoteFormat || ee,
         folder: n.weeklyNoteFolder?.trim() || "",
         template: n.weeklyNoteTemplate?.trim() || "",
       };
@@ -93,14 +93,14 @@ var Fe = Ie(l => {
       console.info("No custom weekly note settings found!", a);
     }
   }
-  function L() {
+  function H() {
     let a = window.app.plugins;
     try {
       let t =
         (S("monthly") && a.getPlugin("periodic-notes")?.settings?.monthly) ||
         {};
       return {
-        format: t.format || me,
+        format: t.format || fe,
         folder: t.folder?.trim() || "",
         template: t.template?.trim() || "",
       };
@@ -116,7 +116,7 @@ var Fe = Ie(l => {
           a.getPlugin("periodic-notes")?.settings?.quarterly) ||
         {};
       return {
-        format: t.format || he,
+        format: t.format || we,
         folder: t.folder?.trim() || "",
         template: t.template?.trim() || "",
       };
@@ -124,13 +124,13 @@ var Fe = Ie(l => {
       console.info("No custom quarterly note settings found!", t);
     }
   }
-  function C() {
+  function R() {
     let a = window.app.plugins;
     try {
       let t =
         (S("yearly") && a.getPlugin("periodic-notes")?.settings?.yearly) || {};
       return {
-        format: t.format || fe,
+        format: t.format || ye,
         folder: t.folder?.trim() || "",
         template: t.template?.trim() || "",
       };
@@ -138,7 +138,7 @@ var Fe = Ie(l => {
       console.info("No custom yearly note settings found!", t);
     }
   }
-  function we(...a) {
+  function ve(...a) {
     let t = [];
     for (let n = 0, i = a.length; n < i; n++) t = t.concat(a[n].split("/"));
     let e = [];
@@ -148,24 +148,24 @@ var Fe = Ie(l => {
     }
     return t[0] === "" && e.unshift(""), e.join("/");
   }
-  function Ue(a) {
+  function qe(a) {
     let t = a.substring(a.lastIndexOf("/") + 1);
     return (
       t.lastIndexOf(".") != -1 && (t = t.substring(0, t.lastIndexOf("."))), t
     );
   }
-  async function qe(a) {
+  async function Ke(a) {
     let t = a.replace(/\\/g, "/").split("/");
     if ((t.pop(), t.length)) {
-      let e = we(...t);
+      let e = ve(...t);
       window.app.vault.getAbstractFileByPath(e) ||
         (await window.app.vault.createFolder(e));
     }
   }
-  async function V(a, t) {
+  async function C(a, t) {
     t.endsWith(".md") || (t += ".md");
-    let e = g.normalizePath(we(a, t));
-    return await qe(e), e;
+    let e = g.normalizePath(ve(a, t));
+    return await Ke(e), e;
   }
   async function A(a) {
     let { metadataCache: t, vault: e } = window.app,
@@ -184,35 +184,35 @@ var Fe = Ie(l => {
       );
     }
   }
-  function N(a, t = "day") {
+  function b(a, t = "day") {
     let e = a.clone().startOf(t).format();
     return `${t}-${e}`;
   }
-  function ye(a) {
+  function Ne(a) {
     return a.replace(/\[[^\]]*\]/g, "");
   }
-  function Be(a, t) {
+  function je(a, t) {
     if (t === "week") {
-      let e = ye(a);
+      let e = Ne(a);
       return /w{1,2}/i.test(e) && (/M{1,4}/.test(e) || /D{1,4}/.test(e));
     }
     return !1;
   }
   function O(a, t) {
-    return ve(a.basename, t);
+    return be(a.basename, t);
   }
-  function je(a, t) {
-    return ve(Ue(a), t);
+  function $e(a, t) {
+    return be(qe(a), t);
   }
-  function ve(a, t) {
-    let n = { day: E, week: H, month: L, quarter: x, year: C }
+  function be(a, t) {
+    let n = { day: E, week: L, month: H, quarter: x, year: R }
         [t]()
         .format.split("/")
         .pop(),
       i = window.moment(a, n, !0);
     if (!i.isValid()) return null;
-    if (Be(n, t) && t === "week") {
-      let o = ye(n);
+    if (je(n, t) && t === "week") {
+      let o = Ne(n);
       if (/w{1,2}/i.test(o))
         return window.moment(
           a,
@@ -222,15 +222,15 @@ var Fe = Ie(l => {
     }
     return i;
   }
-  var X = class extends Error {};
-  async function Ne(a) {
+  var te = class extends Error {};
+  async function ke(a) {
     let t = window.app,
       { vault: e } = t,
       n = window.moment,
       { template: i, format: o, folder: s } = E(),
       [p, d] = await A(i),
       r = a.format(o),
-      c = await V(s, r);
+      c = await C(s, r);
     try {
       let y = await e.create(
         c,
@@ -240,18 +240,18 @@ var Fe = Ie(l => {
           .replace(/{{\s*title\s*}}/gi, r)
           .replace(
             /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
-            (b, k, T, v, f, m) => {
-              let z = n(),
-                G = a
+            (k, P, T, v, f, m) => {
+              let G = n(),
+                Q = a
                   .clone()
                   .set({
-                    hour: z.get("hour"),
-                    minute: z.get("minute"),
-                    second: z.get("second"),
+                    hour: G.get("hour"),
+                    minute: G.get("minute"),
+                    second: G.get("second"),
                   });
               return (
-                T && G.add(parseInt(v, 10), f),
-                m ? G.format(m.substring(1).trim()) : G.format(o)
+                T && Q.add(parseInt(v, 10), f),
+                m ? Q.format(m.substring(1).trim()) : Q.format(o)
               );
             }
           )
@@ -267,21 +267,21 @@ var Fe = Ie(l => {
         new g.Notice("Unable to create new file.");
     }
   }
-  function Ke(a, t) {
-    return t[N(a, "day")] ?? null;
+  function ze(a, t) {
+    return t[b(a, "day")] ?? null;
   }
-  function $e() {
+  function Ge() {
     let { vault: a } = window.app,
       { folder: t } = E(),
       e = a.getAbstractFileByPath(g.normalizePath(t));
-    if (!e) throw new X("Failed to find daily notes folder");
+    if (!e) throw new te("Failed to find daily notes folder");
     let n = {};
     return (
       g.Vault.recurseChildren(e, i => {
         if (i instanceof g.TFile) {
           let o = O(i, "day");
           if (o) {
-            let s = N(o, "day");
+            let s = b(o, "day");
             n[s] = i;
           }
         }
@@ -289,8 +289,8 @@ var Fe = Ie(l => {
       n
     );
   }
-  var ee = class extends Error {};
-  function ze() {
+  var ae = class extends Error {};
+  function Qe() {
     let { moment: a } = window,
       t = a.localeData()._week.dow,
       e = [
@@ -305,22 +305,22 @@ var Fe = Ie(l => {
     for (; t; ) e.push(e.shift()), t--;
     return e;
   }
-  function Ge(a) {
-    return ze().indexOf(a.toLowerCase());
+  function Je(a) {
+    return Qe().indexOf(a.toLowerCase());
   }
-  async function be(a) {
+  async function Pe(a) {
     let { vault: t } = window.app,
-      { template: e, format: n, folder: i } = H(),
+      { template: e, format: n, folder: i } = L(),
       [o, s] = await A(e),
       p = a.format(n),
-      d = await V(i, p);
+      d = await C(i, p);
     try {
       let r = await t.create(
         d,
         o
           .replace(
             /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
-            (c, y, b, k, T, v) => {
+            (c, y, k, P, T, v) => {
               let f = window.moment(),
                 m = a
                   .clone()
@@ -330,7 +330,7 @@ var Fe = Ie(l => {
                     second: f.get("second"),
                   });
               return (
-                b && m.add(parseInt(k, 10), T),
+                k && m.add(parseInt(P, 10), T),
                 v ? m.format(v.substring(1).trim()) : m.format(n)
               );
             }
@@ -339,72 +339,11 @@ var Fe = Ie(l => {
           .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
           .replace(
             /{{\s*(sunday|monday|tuesday|wednesday|thursday|friday|saturday)\s*:(.*?)}}/gi,
-            (c, y, b) => {
-              let k = Ge(y);
-              return a.weekday(k).format(b.trim());
+            (c, y, k) => {
+              let P = Je(y);
+              return a.weekday(P).format(k.trim());
             }
           )
-      );
-      return window.app.foldManager.save(r, s), r;
-    } catch (r) {
-      console.error(`Failed to create file: '${d}'`, r),
-        new g.Notice("Unable to create new file.");
-    }
-  }
-  function Qe(a, t) {
-    return t[N(a, "week")] ?? null;
-  }
-  function Je() {
-    let a = {};
-    if (!Pe()) return a;
-    let { vault: t } = window.app,
-      { folder: e } = H(),
-      n = t.getAbstractFileByPath(g.normalizePath(e));
-    if (!n) throw new ee("Failed to find weekly notes folder");
-    return (
-      g.Vault.recurseChildren(n, i => {
-        if (i instanceof g.TFile) {
-          let o = O(i, "week");
-          if (o) {
-            let s = N(o, "week");
-            a[s] = i;
-          }
-        }
-      }),
-      a
-    );
-  }
-  var te = class extends Error {};
-  async function ke(a) {
-    let { vault: t } = window.app,
-      { template: e, format: n, folder: i } = L(),
-      [o, s] = await A(e),
-      p = a.format(n),
-      d = await V(i, p);
-    try {
-      let r = await t.create(
-        d,
-        o
-          .replace(
-            /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
-            (c, y, b, k, T, v) => {
-              let f = window.moment(),
-                m = a
-                  .clone()
-                  .set({
-                    hour: f.get("hour"),
-                    minute: f.get("minute"),
-                    second: f.get("second"),
-                  });
-              return (
-                b && m.add(parseInt(k, 10), T),
-                v ? m.format(v.substring(1).trim()) : m.format(n)
-              );
-            }
-          )
-          .replace(/{{\s*date\s*}}/gi, p)
-          .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
-          .replace(/{{\s*title\s*}}/gi, p)
       );
       return window.app.foldManager.save(r, s), r;
     } catch (r) {
@@ -413,82 +352,21 @@ var Fe = Ie(l => {
     }
   }
   function Ze(a, t) {
-    return t[N(a, "month")] ?? null;
+    return t[b(a, "week")] ?? null;
   }
   function Xe() {
     let a = {};
-    if (!Te()) return a;
+    if (!De()) return a;
     let { vault: t } = window.app,
       { folder: e } = L(),
       n = t.getAbstractFileByPath(g.normalizePath(e));
-    if (!n) throw new te("Failed to find monthly notes folder");
+    if (!n) throw new ae("Failed to find weekly notes folder");
     return (
       g.Vault.recurseChildren(n, i => {
         if (i instanceof g.TFile) {
-          let o = O(i, "month");
+          let o = O(i, "week");
           if (o) {
-            let s = N(o, "month");
-            a[s] = i;
-          }
-        }
-      }),
-      a
-    );
-  }
-  var ae = class extends Error {};
-  async function et(a) {
-    let { vault: t } = window.app,
-      { template: e, format: n, folder: i } = x(),
-      [o, s] = await A(e),
-      p = a.format(n),
-      d = await V(i, p);
-    try {
-      let r = await t.create(
-        d,
-        o
-          .replace(
-            /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
-            (c, y, b, k, T, v) => {
-              let f = window.moment(),
-                m = a
-                  .clone()
-                  .set({
-                    hour: f.get("hour"),
-                    minute: f.get("minute"),
-                    second: f.get("second"),
-                  });
-              return (
-                b && m.add(parseInt(k, 10), T),
-                v ? m.format(v.substring(1).trim()) : m.format(n)
-              );
-            }
-          )
-          .replace(/{{\s*date\s*}}/gi, p)
-          .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
-          .replace(/{{\s*title\s*}}/gi, p)
-      );
-      return window.app.foldManager.save(r, s), r;
-    } catch (r) {
-      console.error(`Failed to create file: '${d}'`, r),
-        new g.Notice("Unable to create new file.");
-    }
-  }
-  function tt(a, t) {
-    return t[N(a, "quarter")] ?? null;
-  }
-  function at() {
-    let a = {};
-    if (!De()) return a;
-    let { vault: t } = window.app,
-      { folder: e } = x(),
-      n = t.getAbstractFileByPath(g.normalizePath(e));
-    if (!n) throw new ae("Failed to find quarterly notes folder");
-    return (
-      g.Vault.recurseChildren(n, i => {
-        if (i instanceof g.TFile) {
-          let o = O(i, "quarter");
-          if (o) {
-            let s = N(o, "quarter");
+            let s = b(o, "week");
             a[s] = i;
           }
         }
@@ -497,19 +375,19 @@ var Fe = Ie(l => {
     );
   }
   var ne = class extends Error {};
-  async function nt(a) {
+  async function Te(a) {
     let { vault: t } = window.app,
-      { template: e, format: n, folder: i } = C(),
+      { template: e, format: n, folder: i } = H(),
       [o, s] = await A(e),
       p = a.format(n),
-      d = await V(i, p);
+      d = await C(i, p);
     try {
       let r = await t.create(
         d,
         o
           .replace(
             /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
-            (c, y, b, k, T, v) => {
+            (c, y, k, P, T, v) => {
               let f = window.moment(),
                 m = a
                   .clone()
@@ -519,7 +397,7 @@ var Fe = Ie(l => {
                     second: f.get("second"),
                   });
               return (
-                b && m.add(parseInt(k, 10), T),
+                k && m.add(parseInt(P, 10), T),
                 v ? m.format(v.substring(1).trim()) : m.format(n)
               );
             }
@@ -534,22 +412,22 @@ var Fe = Ie(l => {
         new g.Notice("Unable to create new file.");
     }
   }
-  function it(a, t) {
-    return t[N(a, "year")] ?? null;
+  function et(a, t) {
+    return t[b(a, "month")] ?? null;
   }
-  function ot() {
+  function tt() {
     let a = {};
     if (!Me()) return a;
     let { vault: t } = window.app,
-      { folder: e } = C(),
+      { folder: e } = H(),
       n = t.getAbstractFileByPath(g.normalizePath(e));
-    if (!n) throw new ne("Failed to find yearly notes folder");
+    if (!n) throw new ne("Failed to find monthly notes folder");
     return (
       g.Vault.recurseChildren(n, i => {
         if (i instanceof g.TFile) {
-          let o = O(i, "year");
+          let o = O(i, "month");
           if (o) {
-            let s = N(o, "year");
+            let s = b(o, "month");
             a[s] = i;
           }
         }
@@ -557,108 +435,233 @@ var Fe = Ie(l => {
       a
     );
   }
-  function st() {
+  var ie = class extends Error {};
+  async function at(a) {
+    let { vault: t } = window.app,
+      { template: e, format: n, folder: i } = x(),
+      [o, s] = await A(e),
+      p = a.format(n),
+      d = await C(i, p);
+    try {
+      let r = await t.create(
+        d,
+        o
+          .replace(
+            /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
+            (c, y, k, P, T, v) => {
+              let f = window.moment(),
+                m = a
+                  .clone()
+                  .set({
+                    hour: f.get("hour"),
+                    minute: f.get("minute"),
+                    second: f.get("second"),
+                  });
+              return (
+                k && m.add(parseInt(P, 10), T),
+                v ? m.format(v.substring(1).trim()) : m.format(n)
+              );
+            }
+          )
+          .replace(/{{\s*date\s*}}/gi, p)
+          .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
+          .replace(/{{\s*title\s*}}/gi, p)
+      );
+      return window.app.foldManager.save(r, s), r;
+    } catch (r) {
+      console.error(`Failed to create file: '${d}'`, r),
+        new g.Notice("Unable to create new file.");
+    }
+  }
+  function nt(a, t) {
+    return t[b(a, "quarter")] ?? null;
+  }
+  function it() {
+    let a = {};
+    if (!Fe()) return a;
+    let { vault: t } = window.app,
+      { folder: e } = x(),
+      n = t.getAbstractFileByPath(g.normalizePath(e));
+    if (!n) throw new ie("Failed to find quarterly notes folder");
+    return (
+      g.Vault.recurseChildren(n, i => {
+        if (i instanceof g.TFile) {
+          let o = O(i, "quarter");
+          if (o) {
+            let s = b(o, "quarter");
+            a[s] = i;
+          }
+        }
+      }),
+      a
+    );
+  }
+  var oe = class extends Error {};
+  async function ot(a) {
+    let { vault: t } = window.app,
+      { template: e, format: n, folder: i } = R(),
+      [o, s] = await A(e),
+      p = a.format(n),
+      d = await C(i, p);
+    try {
+      let r = await t.create(
+        d,
+        o
+          .replace(
+            /{{\s*(date|time)\s*(([+-]\d+)([yqmwdhs]))?\s*(:.+?)?}}/gi,
+            (c, y, k, P, T, v) => {
+              let f = window.moment(),
+                m = a
+                  .clone()
+                  .set({
+                    hour: f.get("hour"),
+                    minute: f.get("minute"),
+                    second: f.get("second"),
+                  });
+              return (
+                k && m.add(parseInt(P, 10), T),
+                v ? m.format(v.substring(1).trim()) : m.format(n)
+              );
+            }
+          )
+          .replace(/{{\s*date\s*}}/gi, p)
+          .replace(/{{\s*time\s*}}/gi, window.moment().format("HH:mm"))
+          .replace(/{{\s*title\s*}}/gi, p)
+      );
+      return window.app.foldManager.save(r, s), r;
+    } catch (r) {
+      console.error(`Failed to create file: '${d}'`, r),
+        new g.Notice("Unable to create new file.");
+    }
+  }
+  function st(a, t) {
+    return t[b(a, "year")] ?? null;
+  }
+  function rt() {
+    let a = {};
+    if (!Ae()) return a;
+    let { vault: t } = window.app,
+      { folder: e } = R(),
+      n = t.getAbstractFileByPath(g.normalizePath(e));
+    if (!n) throw new oe("Failed to find yearly notes folder");
+    return (
+      g.Vault.recurseChildren(n, i => {
+        if (i instanceof g.TFile) {
+          let o = O(i, "year");
+          if (o) {
+            let s = b(o, "year");
+            a[s] = i;
+          }
+        }
+      }),
+      a
+    );
+  }
+  function lt() {
     let { app: a } = window,
       t = a.internalPlugins.plugins["daily-notes"];
     if (t && t.enabled) return !0;
     let e = a.plugins.getPlugin("periodic-notes");
     return e && e.settings?.daily?.enabled;
   }
-  function Pe() {
+  function De() {
     let { app: a } = window;
     if (a.plugins.getPlugin("calendar")) return !0;
     let t = a.plugins.getPlugin("periodic-notes");
     return t && t.settings?.weekly?.enabled;
   }
-  function Te() {
+  function Me() {
     let { app: a } = window,
       t = a.plugins.getPlugin("periodic-notes");
     return t && t.settings?.monthly?.enabled;
   }
-  function De() {
+  function Fe() {
     let { app: a } = window,
       t = a.plugins.getPlugin("periodic-notes");
     return t && t.settings?.quarterly?.enabled;
   }
-  function Me() {
+  function Ae() {
     let { app: a } = window,
       t = a.plugins.getPlugin("periodic-notes");
     return t && t.settings?.yearly?.enabled;
   }
-  function rt(a) {
-    let t = { day: E, week: H, month: L, quarter: x, year: C }[a];
+  function ct(a) {
+    let t = { day: E, week: L, month: H, quarter: x, year: R }[a];
     return t();
   }
-  function lt(a, t) {
-    return { day: Ne, month: ke, week: be }[a](t);
+  function dt(a, t) {
+    return { day: ke, month: Te, week: Pe }[a](t);
   }
-  l.DEFAULT_DAILY_NOTE_FORMAT = J;
-  l.DEFAULT_MONTHLY_NOTE_FORMAT = me;
-  l.DEFAULT_QUARTERLY_NOTE_FORMAT = he;
-  l.DEFAULT_WEEKLY_NOTE_FORMAT = Z;
-  l.DEFAULT_YEARLY_NOTE_FORMAT = fe;
-  l.appHasDailyNotesPluginLoaded = st;
-  l.appHasMonthlyNotesPluginLoaded = Te;
-  l.appHasQuarterlyNotesPluginLoaded = De;
-  l.appHasWeeklyNotesPluginLoaded = Pe;
-  l.appHasYearlyNotesPluginLoaded = Me;
-  l.createDailyNote = Ne;
-  l.createMonthlyNote = ke;
-  l.createPeriodicNote = lt;
-  l.createQuarterlyNote = et;
-  l.createWeeklyNote = be;
-  l.createYearlyNote = nt;
-  l.getAllDailyNotes = $e;
-  l.getAllMonthlyNotes = Xe;
-  l.getAllQuarterlyNotes = at;
-  l.getAllWeeklyNotes = Je;
-  l.getAllYearlyNotes = ot;
-  l.getDailyNote = Ke;
+  l.DEFAULT_DAILY_NOTE_FORMAT = X;
+  l.DEFAULT_MONTHLY_NOTE_FORMAT = fe;
+  l.DEFAULT_QUARTERLY_NOTE_FORMAT = we;
+  l.DEFAULT_WEEKLY_NOTE_FORMAT = ee;
+  l.DEFAULT_YEARLY_NOTE_FORMAT = ye;
+  l.appHasDailyNotesPluginLoaded = lt;
+  l.appHasMonthlyNotesPluginLoaded = Me;
+  l.appHasQuarterlyNotesPluginLoaded = Fe;
+  l.appHasWeeklyNotesPluginLoaded = De;
+  l.appHasYearlyNotesPluginLoaded = Ae;
+  l.createDailyNote = ke;
+  l.createMonthlyNote = Te;
+  l.createPeriodicNote = dt;
+  l.createQuarterlyNote = at;
+  l.createWeeklyNote = Pe;
+  l.createYearlyNote = ot;
+  l.getAllDailyNotes = Ge;
+  l.getAllMonthlyNotes = tt;
+  l.getAllQuarterlyNotes = it;
+  l.getAllWeeklyNotes = Xe;
+  l.getAllYearlyNotes = rt;
+  l.getDailyNote = ze;
   l.getDailyNoteSettings = E;
   l.getDateFromFile = O;
-  l.getDateFromPath = je;
-  l.getDateUID = N;
-  l.getMonthlyNote = Ze;
-  l.getMonthlyNoteSettings = L;
-  l.getPeriodicNoteSettings = rt;
-  l.getQuarterlyNote = tt;
+  l.getDateFromPath = $e;
+  l.getDateUID = b;
+  l.getMonthlyNote = et;
+  l.getMonthlyNoteSettings = H;
+  l.getPeriodicNoteSettings = ct;
+  l.getQuarterlyNote = nt;
   l.getQuarterlyNoteSettings = x;
   l.getTemplateInfo = A;
-  l.getWeeklyNote = Qe;
-  l.getWeeklyNoteSettings = H;
-  l.getYearlyNote = it;
-  l.getYearlyNoteSettings = C;
+  l.getWeeklyNote = Ze;
+  l.getWeeklyNoteSettings = L;
+  l.getYearlyNote = st;
+  l.getYearlyNoteSettings = R;
 });
-var pt = {};
-_e(pt, { default: () => $ });
-module.exports = Ye(pt);
+var gt = {};
+Ye(gt, { default: () => z });
+module.exports = Be(gt);
 var M = require("obsidian");
 var w = require("obsidian");
-var Ae = require("obsidian");
-var de = require("obsidian");
-function P(a) {
+var Se = require("obsidian");
+var ue = require("obsidian");
+function N(a) {
   return a ? (a.extension == "md" ? a.path.slice(0, -3) : a.path) : "";
 }
-function pe(a) {
+function ge(a) {
   return a.split("/").slice(-1)[0].contains(".") ? a : `${a}.md`;
 }
-function ue(a) {
+function me(a) {
   let t = a.vault
     .getFiles()
     .filter(e => ["md", "canvas"].contains(e.extension));
   if (t.length) {
     let e = Math.floor(Math.random() * t.length);
-    return P(t[e]);
+    return N(t[e]);
   }
 }
-function ge(a) {
-  return a.workspace.getActiveViewOfType(de.View)?.getViewType() == "empty";
+function he(a) {
+  return a.workspace.getActiveViewOfType(ue.View)?.getViewType() == "empty";
 }
-function Q(a, t) {
+function J(a, t) {
   return a.localeCompare(t, void 0, { sensitivity: "accent" }) === 0;
 }
-var u = We(Fe()),
-  ie = {
+function Z(a) {
+  return new Promise(t => setTimeout(t, a));
+}
+var u = Ue(Oe()),
+  se = {
     ["Daily Note"]: {
       noun: "day",
       adjective: "daily",
@@ -688,13 +691,13 @@ var u = We(Fe()),
       getAll: u.getAllYearlyNotes,
     },
   },
-  oe = ["Daily Note", "Weekly Note", "Monthly Note", "Yearly Note"];
-async function Oe(a, t) {
+  W = ["Daily Note", "Weekly Note", "Monthly Note", "Yearly Note"];
+async function Ee(a, t) {
   let e = t.communityPlugins["periodic-notes"],
-    n = ie[a],
-    i = (0, Ae.moment)().startOf(n.noun),
+    n = se[a],
+    i = (0, Se.moment)().startOf(n.noun),
     o;
-  if (Ee(e)) {
+  if (He(e)) {
     let s = n.getAll();
     Object.keys(s).length
       ? (o = n.get(i, s) || (await n.create(i)))
@@ -704,46 +707,47 @@ async function Oe(a, t) {
       (o =
         e.getPeriodicNote(n.noun, i) ||
         (await e.createPeriodicNote(n.noun, i)));
-  return P(o);
+  return N(o);
 }
-function Se(a, t) {
+function Le(a, t) {
   if (a == "Daily Note" && t.internalPlugins["daily-notes"]?.enabled) return !0;
   let e = t.communityPlugins["periodic-notes"];
   if (!e) return !1;
-  if (Ee(e)) {
-    let n = ie[a].adjective;
+  if (He(e)) {
+    let n = se[a].adjective;
     return t.communityPlugins["periodic-notes"].settings[n]?.enabled;
   } else {
-    let n = ie[a].noun;
+    let n = se[a].noun;
     return t.communityPlugins[
       "periodic-notes"
     ]?.calendarSetManager?.getActiveSet()[n]?.enabled;
   }
 }
-function W(a) {
+function Y(a) {
   let t = a.internalPlugins["daily-notes"];
   return t?.enabled && t?.instance.options.autorun;
 }
-function Ee(a) {
+function He(a) {
   return (a?.manifest.version || "0").startsWith("0");
 }
-var He = ["markdown", "canvas", "kanban"],
+var xe = ["markdown", "canvas", "kanban"],
+  pt = [...xe, "audio", "graph", "image", "pdf", "video"],
   F = "Main Homepage",
-  Y = "Mobile Homepage",
-  U = (n => (
+  U = "Mobile Homepage",
+  B = (n => (
     (n.ReplaceAll = "Replace all open notes"),
     (n.ReplaceLast = "Replace last note"),
     (n.Retain = "Keep open notes"),
     n
-  ))(U || {}),
-  se = (i => (
+  ))(B || {}),
+  re = (i => (
     (i.Default = "Default view"),
     (i.Reading = "Reading view"),
     (i.Source = "Editing view (Source)"),
     (i.LivePreview = "Editing view (Live Preview)"),
     i
-  ))(se || {}),
-  R = (c => (
+  ))(re || {}),
+  V = (c => (
     (c.File = "File"),
     (c.Workspace = "Workspace"),
     (c.Random = "Random file"),
@@ -755,21 +759,23 @@ var He = ["markdown", "canvas", "kanban"],
     (c.YearlyNote = "Yearly Note"),
     (c.MomentDate = "Date-dependent file"),
     c
-  ))(R || {}),
-  I = class {
+  ))(V || {}),
+  le = ["Random file", "Graph view", "Nothing", ...W],
+  _ = class {
     constructor(t, e) {
       this.lastView = void 0;
       this.openedViews = new WeakMap();
       (this.name = t),
         (this.plugin = e),
         (this.app = e.app),
-        (this.data = e.settings.homepages[t]),
-        this.data.commands || ((this.data.commands = []), this.save());
+        (this.data = e.settings.homepages[t]);
     }
     async open(t = !1) {
       if (this.plugin.hasRequiredPlugin(this.data.kind))
-        this.data.hideReleaseNotes &&
-          this.app.workspace.detachLeavesOfType("release-notes");
+        this.data.kind === "Date-dependent file" &&
+          new w.Notice(
+            "Moment-based homepages are deprecated, and will be removed in a future version. Please change your homepage to a Daily or Periodic Notes type in the Homepage settings pane."
+          );
       else {
         new w.Notice("Homepage cannot be opened due to plugin unavailablity.");
         return;
@@ -793,14 +799,14 @@ var He = ["markdown", "canvas", "kanban"],
         );
         return;
       }
-      t.loadWorkspace(this.data.value);
+      t.loadWorkspace(this.data.value), await Z(100);
     }
     async launchLeaf(t) {
       let e;
       if (
         ((this.computedValue = await this.computeValue()),
         (this.plugin.executing = !0),
-        !(W(this.plugin) && !this.plugin.loaded))
+        !(Y(this.plugin) && !this.plugin.loaded))
       ) {
         if (t !== "Replace all open notes") {
           let n = this.getOpened();
@@ -808,13 +814,13 @@ var He = ["markdown", "canvas", "kanban"],
             this.app.workspace.setActiveLeaf(n[0]), await this.configure(n[0]);
             return;
           } else
-            t == "Keep open notes" && ge(this.app) && (t = "Replace last note");
+            t == "Keep open notes" && he(this.app) && (t = "Replace last note");
         }
         t !== "Keep open notes" &&
           this.app.workspace.getActiveViewOfType(w.View)?.leaf.setPinned(!1),
           t === "Replace all open notes" &&
-            (He.forEach(n => this.app.workspace.detachLeavesOfType(n)),
-            await Promise.resolve()),
+            (pt.forEach(n => this.app.workspace.detachLeavesOfType(n)),
+            await Z(0)),
           this.data.kind === "Graph view"
             ? (e = await this.launchGraph(t))
             : (e = await this.launchNote(t)),
@@ -841,7 +847,7 @@ var He = ["markdown", "canvas", "kanban"],
           new w.Notice(`Homepage "${this.computedValue}" does not exist.`);
           return;
         }
-        e = await this.app.vault.create(pe(this.computedValue), "");
+        e = await this.app.vault.create(ge(this.computedValue), "");
       }
       let n = await this.app.vault.cachedRead(e),
         i = this.app.workspace.getLeaf(t == "Keep open notes");
@@ -893,9 +899,9 @@ var He = ["markdown", "canvas", "kanban"],
     getOpened() {
       return this.data.kind == "Graph view"
         ? this.app.workspace.getLeavesOfType("graph")
-        : He.flatMap(e => this.app.workspace.getLeavesOfType(e)).filter(e =>
-            Q(P(e.view.file), this.computedValue)
-          );
+        : xe
+            .flatMap(e => this.app.workspace.getLeavesOfType(e))
+            .filter(e => J(N(e.view.file), this.computedValue));
     }
     async computeValue() {
       let t = this.data.value;
@@ -904,14 +910,14 @@ var He = ["markdown", "canvas", "kanban"],
           t = (0, w.moment)().format(this.data.value);
           break;
         case "Random file":
-          let e = ue(this.app);
+          let e = me(this.app);
           e && (t = e);
           break;
         case "Daily Note":
         case "Weekly Note":
         case "Monthly Note":
         case "Yearly Note":
-          t = await Oe(this.data.kind, this.plugin);
+          t = await Ee(this.data.kind, this.plugin);
           break;
       }
       return t;
@@ -920,10 +926,21 @@ var He = ["markdown", "canvas", "kanban"],
       (this.plugin.settings.homepages[this.name] = this.data),
         await this.plugin.saveSettings();
     }
+    async setToActiveFile() {
+      (this.data.value = N(this.app.workspace.getActiveFile())),
+        await this.save(),
+        new w.Notice(`The homepage has been changed to "${this.data.value}".`);
+    }
+    canSetToFile() {
+      return (
+        this.app.workspace.getActiveFile() !== null &&
+        !le.includes(this.data.kind)
+      );
+    }
     async revertView() {
       if (this.lastView == null || this.data.view == "Default view") return;
       let t = this.lastView.deref();
-      if (!t || Q(P(t.file), this.computedValue)) return;
+      if (!t || J(N(t.file), this.computedValue)) return;
       let e = t.getState(),
         n = this.app.vault.config,
         i = n.defaultViewMode || "source",
@@ -945,7 +962,7 @@ var He = ["markdown", "canvas", "kanban"],
     async apply() {
       let t = this.app.workspace.getActiveViewOfType(w.FileView);
       if (!t) return;
-      let e = P(t.file);
+      let e = N(t.file);
       this.openedViews.get(t) !== e &&
         (this.openedViews.set(t, e),
         e === (await this.computeValue()) &&
@@ -973,7 +990,7 @@ var q = class extends D.AbstractInputSuggest {
     }
     renderSuggestion(e, n) {
       e.extension == "md"
-        ? n.setText(P(e))
+        ? n.setText(N(e))
         : (n.setText(e.path.slice(0, -7)),
           n.insertAdjacentHTML(
             "beforeend",
@@ -981,12 +998,12 @@ var q = class extends D.AbstractInputSuggest {
           ));
     }
     selectSuggestion(e) {
-      (this.textInputEl.value = P(e)),
+      (this.textInputEl.value = N(e)),
         this.textInputEl.trigger("input"),
         this.close();
     }
   },
-  B = class extends D.AbstractInputSuggest {
+  K = class extends D.AbstractInputSuggest {
     getSuggestions(e) {
       let n = Object.keys(
           this.app.internalPlugins.plugins.workspaces?.instance.workspaces
@@ -1024,7 +1041,7 @@ var q = class extends D.AbstractInputSuggest {
         this.tab.updateCommandBox();
     }
   };
-var le = {
+var de = {
     version: 3,
     homepages: {
       [F]: {
@@ -1047,9 +1064,8 @@ var le = {
     },
     separateMobile: !1,
   },
-  re = le.homepages[F],
-  ct = ["Random file", "Graph view", "Nothing", ...oe],
-  K = class extends h.PluginSettingTab {
+  ce = de.homepages[F],
+  $ = class extends h.PluginSettingTab {
     constructor(e, n) {
       super(e, n);
       (this.plugin = n), (this.settings = n.settings);
@@ -1062,15 +1078,15 @@ var le = {
     display() {
       let e = this.plugin.homepage.data.kind == "Workspace",
         n = this.plugin.homepage.data.kind,
-        i = W(this.plugin),
+        i = Y(this.plugin),
         o = !1,
         s = document.createElement("article"),
-        p = e ? B : q;
+        p = e ? K : q;
       this.containerEl.empty(), (this.elements = {}), (s.id = "nv-desc");
       let d = new h.Setting(this.containerEl)
         .setName("Homepage")
         .addDropdown(async r => {
-          for (let c of Object.values(R)) {
+          for (let c of Object.values(V)) {
             if (!this.plugin.hasRequiredPlugin(c))
               if (c == this.plugin.homepage.data.kind) o = !0;
               else continue;
@@ -1126,21 +1142,21 @@ var le = {
           text: "The plugin required for this homepage type isn't available.",
           attr: { class: "mod-warning" },
         }),
-        ct.includes(n)
+        le.includes(n)
           ? d.addText(r => {
               r.setDisabled(!0);
             })
           : d.addText(r => {
               new p(this.app, r.inputEl),
-                r.setPlaceholder(re.value),
+                r.setPlaceholder(ce.value),
                 r.setValue(
-                  re.value == this.plugin.homepage.data.value
+                  ce.value == this.plugin.homepage.data.value
                     ? ""
                     : this.plugin.homepage.data.value
                 ),
                 r.onChange(async c => {
                   (this.plugin.homepage.data.value =
-                    this.sanitiseNote(c) || re.value),
+                    this.sanitiseNote(c) || ce.value),
                     await this.plugin.homepage.save();
                 });
             }),
@@ -1195,13 +1211,13 @@ var le = {
           "Opening method",
           "Determine how extant tabs and views are affected on startup.",
           "openMode",
-          U
+          B
         ),
         this.addDropdown(
           "Manual opening method",
           "Determine how extant tabs and views are affected when opening with commands or the ribbon button.",
           "manualOpenMode",
-          U
+          B
         ),
         this.addToggle(
           "Auto-create",
@@ -1219,7 +1235,7 @@ var le = {
           "Homepage view",
           "Choose what view to open the homepage in.",
           "view",
-          se
+          re
         ),
         this.addToggle(
           "Revert view on close",
@@ -1266,7 +1282,7 @@ var le = {
           ),
         (!this.plugin.homepage.data.openOnStartup || i) &&
           this.disableSetting("openMode"),
-        oe.includes(this.plugin.homepage.data.kind) &&
+        W.includes(this.plugin.homepage.data.kind) &&
           this.disableSetting("autoCreate");
     }
     disableSetting(e) {
@@ -1355,11 +1371,12 @@ var le = {
         new h.Notice("Copied homepage debug information to clipboard");
     }
   };
-var dt =
+var ut =
     '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"><path d="M10.025 21H6v-7H3v-1.5L12 3l9 9.5V14h-3v7h-4v-7h-3.975v7Z" style="fill:none;stroke:currentColor;stroke-width:2px"/></svg>',
-  $ = class extends M.Plugin {
+  z = class extends M.Plugin {
     constructor() {
       super(...arguments);
+      this.newRelease = !1;
       this.loaded = !1;
       this.executing = !1;
       this.onLayoutChange = async () => {
@@ -1371,22 +1388,22 @@ var dt =
     }
     async onload() {
       let e = document.body.querySelector(".progress-bar") !== null;
-      (this.settings = await this.loadSettings()),
+      this.patchReleaseNotes(),
+        (this.settings = await this.loadSettings()),
         (this.internalPlugins = this.app.internalPlugins.plugins),
         (this.communityPlugins = this.app.plugins.plugins),
         (this.homepage = this.getHomepage()),
         this.app.workspace.onLayoutReady(async () => {
-          let n = this.communityPlugins["new-tab-default-page"],
-            i = this.homepage.data.openOnStartup && e && !this.hasUrlParams();
-          n &&
-            ((n._checkForNewTab = n.checkForNewTab),
-            (n.checkForNewTab = async o => {
-              if (!(this && this.executing)) return await n._checkForNewTab(o);
-            })),
-            i && (await this.homepage.open()),
-            (this.loaded = !0);
+          let n =
+            this.homepage.data.openOnStartup &&
+            e &&
+            !(await this.hasUrlParams());
+          this.patchNewTabPage(),
+            n && (await this.homepage.open()),
+            (this.loaded = !0),
+            this.unpatchReleaseNotes();
         }),
-        (0, M.addIcon)("homepage", dt),
+        (0, M.addIcon)("homepage", ut),
         this.addRibbonIcon("homepage", "Open homepage", n =>
           this.homepage.open(
             n.button == 1 || n.button == 2 || M.Keymap.isModifier(n, "Mod")
@@ -1395,31 +1412,38 @@ var dt =
         this.registerEvent(
           this.app.workspace.on("layout-change", this.onLayoutChange)
         ),
-        this.addSettingTab(new K(this.app, this)),
+        this.addSettingTab(new $(this.app, this)),
         this.addCommand({
           id: "open-homepage",
           name: "Open homepage",
           callback: () => this.homepage.open(),
+        }),
+        this.addCommand({
+          id: "set-to-active-file",
+          name: "Set to active file",
+          checkCallback: n => {
+            if (n) return this.homepage.canSetToFile();
+            this.homepage.setToActiveFile();
+          },
         }),
         console.log(
           `Homepage: ${this.homepage.data.value} (method: ${this.homepage.data.openMode}, view: ${this.homepage.data.view}, kind: ${this.homepage.data.kind})`
         );
     }
     async onunload() {
-      this.app.workspace.off("layout-change", this.onLayoutChange);
-      let e = this.communityPlugins["new-tab-default-page"];
-      e && (e.checkForNewTab = e._checkForNewTab);
+      this.app.workspace.off("layout-change", this.onLayoutChange),
+        this.unpatchNewTabPage();
     }
     getHomepage() {
       return this.settings.separateMobile && M.Platform.isMobile
-        ? (Y in this.settings.homepages ||
-            (this.settings.homepages[Y] = { ...this.settings.homepages[F] }),
-          new I(Y, this))
-        : new I(F, this);
+        ? (U in this.settings.homepages ||
+            (this.settings.homepages[U] = { ...this.settings.homepages[F] }),
+          new _(U, this))
+        : new _(F, this);
     }
     async loadSettings() {
       let e = await this.loadData();
-      if (!e || e.version !== 2) return Object.assign({}, le, e);
+      if (!e || e.version !== 2) return Object.assign({}, de, e);
       {
         let n = { version: 3, homepages: {}, separateMobile: !1 },
           i = e;
@@ -1443,12 +1467,19 @@ var dt =
     async saveSettings() {
       await this.saveData(this.settings);
     }
-    hasUrlParams() {
-      let e = window.OBS_ACT;
+    async hasUrlParams() {
+      let e, n;
+      if (M.Platform.isMobile) {
+        let i = await window.Capacitor.Plugins.App.getLaunchUrl();
+        if (!i) return !1;
+        let o = new URL(i.url);
+        (n = Array.from(o.searchParams.keys())), (e = o.hostname);
+      } else if (window.OBS_ACT)
+        (n = Object.keys(window.OBS_ACT)), (e = window.OBS_ACT.action);
+      else return !1;
       return (
-        e &&
-        ["open", "advanced-uri"].includes(e?.action) &&
-        ("file" in e || "filepath" in e || "workspace" in e)
+        ["open", "advanced-uri"].includes(e) &&
+        ["file", "filepath", "workspace"].some(i => n.includes(i))
       );
     }
     hasRequiredPlugin(e) {
@@ -1461,9 +1492,32 @@ var dt =
         case "Weekly Note":
         case "Monthly Note":
         case "Yearly Note":
-          return Se(e, this);
+          return Le(e, this);
         default:
           return !0;
       }
+    }
+    patchNewTabPage() {
+      let e = this.communityPlugins["new-tab-default-page"];
+      e &&
+        ((e.nvOrig_checkForNewTab = e.checkForNewTab),
+        (e.checkForNewTab = async n => {
+          if (!(this && this.executing))
+            return await e.nvOrig_checkForNewTab(n);
+        }));
+    }
+    unpatchNewTabPage() {
+      let e = this.communityPlugins["new-tab-default-page"];
+      e && (e.checkForNewTab = e._checkForNewTab);
+    }
+    patchReleaseNotes() {
+      (this.app.nvOrig_showReleaseNotes = this.app.showReleaseNotes),
+        (this.app.showReleaseNotes = () => (this.newRelease = !0));
+    }
+    unpatchReleaseNotes() {
+      this.newRelease &&
+        !this.homepage.data.hideReleaseNotes &&
+        this.app.nvOrig_showReleaseNotes(),
+        (this.app.showReleaseNotes = this.app.nvOrig_showReleaseNotes);
     }
   };

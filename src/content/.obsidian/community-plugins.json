@@ -1,1 +1,6 @@
-["dataview", "cm-editor-syntax-highlight-obsidian", "homepage"]
+[
+  "dataview",
+  "cm-editor-syntax-highlight-obsidian",
+  "homepage",
+  "table-editor-obsidian"
+]
