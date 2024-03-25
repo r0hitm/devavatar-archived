@@ -2,14 +2,14 @@
 title: "Syncing Obsidian for Free: Empower Your Workflow on Any Device"
 description: Step-by-Step tutorial for setting up Git and GitHub to sync Obsidian notes between multiple devices for free.
 pubDatetime: 2023-06-07T00:00:00.000Z
-modDatetime: 2024-03-07T06:18:23.737Z
+modDatetime: 2024-03-25T04:28:07.277Z
 tags:
   - tutorial
 ---
 
-## Table of Contents
-
 [Obsidian](https://obsidian.md/) is more than just a note-taking app—it's a powerful tool for organizing your thoughts and ideas. In this blog post, I'll be sharing my personal setup for syncing Obsidian notes between multiple devices (except iPhone) using Git and GitHub. Note that I'll assume that you're already familiar with Git and GitHub. So, let's dive in!
+
+## Table of Contents
 
 ## Desktop (PC or Mac)
 
@@ -36,9 +36,9 @@ Assuming you have Git installed and configured with your username and email (usi
 3. Install the Obsidian Git community plugin in Obsidian. This plugin will automatically commit and push any changes you make to your GitHub repository.
 4. Adjust the commit and push frequency according to your preference in the plugin settings.
 
-Note 1: If like me, you have gpg commit signing enabled for all your repositories, you may want to consider disabling it specifically for your Notes vault. This is because gpg commit signing can either prevent commits (due to the lack of a TTY) or require you to enter your passphrase frequently, which can be quite inconvenient. Disable using `git config commit.gpgsign false`.
+**Note 1**: If like me, you have gpg commit signing enabled for all your repositories, you may want to consider disabling it specifically for your Notes vault. This is because gpg commit signing can either prevent commits (due to the lack of a TTY) or require you to enter your passphrase frequently, which can be quite inconvenient. Disable using `git config commit.gpgsign false`.
 
-Note 2: Obsidian uses LF line endings, so it might break the newline characters on devices that use different line endings (say Windows and Mac) because on Windows, git auto converts LF line endings to CRLF (windows default). If you run into this issue, make sure you disable `autocrlf` using: `git config core.autocrlf false`.
+**Note 2**: Obsidian uses LF line endings, so it might break the newline characters on devices that use different line endings (say Windows and Mac) because on Windows, git auto converts LF line endings to CRLF (windows default). If you run into this issue, make sure you disable `autocrlf` using: `git config core.autocrlf false`.
 
 ## Android
 

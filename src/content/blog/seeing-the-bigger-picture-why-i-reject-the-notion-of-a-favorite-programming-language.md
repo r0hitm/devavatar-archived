@@ -2,16 +2,17 @@
 title: "Seeing the Bigger Picture: Why I Reject the Notion of a Favorite Programming Language"
 description: A language-agnostic approach to programming can unlock many opportunities. By applying program design principles and concepts from different languages, developers can craft efficient and elegant solutions. It is important to keep in mind that programming languages are tools we can use, and the language choice should match the problem.
 pubDatetime: 2023-06-15T00:00:00.000Z
+modDatetime: 2024-03-25T04:25:36.085Z
 tags:
   - review
   - programming
 ---
 
-## Table of Contents
-
 > **"You should not have a favorite weapon. To become over-familiar with one weapon is as much a fault as not knowing it sufficiently well."**
 >
 > \- Miyamoto Musashi
+
+## Table of Contents
 
 ## Introduction
 

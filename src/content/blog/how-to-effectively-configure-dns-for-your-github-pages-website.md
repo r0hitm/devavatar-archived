@@ -13,9 +13,9 @@ GitHub Pages is a great platform for hosting your website for free. However, the
 
 The first step in setting up a custom domain name with GitHub Pages is to buy a domain name. There are many domain registrars to choose from, including GoDaddy, Namecheap, and Google Domains. Simply search for "domain registrar" and choose one that you like.
 
-**Bonus**: If you're a student, you can get a free domain name through the [GitHub Student Developer Pack](https://education.github.com/pack). The pack includes free domains from various registrars, including Namecheap.
+**Bonus**: If you're a student, you can get a free domain name through the [GitHub Student Developer Pack](https://education.github.com/pack). The pack includes free domains from various registrars, including NameCheap.
 
-**Step 2**: Add Host Records in the donain's DNS settings
+**Step 2**: Add Host Records in the domain's DNS settings
 
 Once you have your domain name, you will need to add few DNS records to your domain's DNS settings. This will associate your custom domain with your GitHub Pages site.
 
@@ -31,7 +31,7 @@ Log in to your domain registrar's account and find the section for managing DNS 
 | A     | @    | 185.199.111.153                    |
 | CNAME | www  | `<your-domain-name>` (example.com) |
 
-You can also add `AAA` records for IPv6 support, use the following values, Host is `@` for each:
+Optionally, you can also add `AAA` records for IPv6 support, use the following values, Host is `@` for each:
 
 ```plaintext
 2606:50c0:8000::153

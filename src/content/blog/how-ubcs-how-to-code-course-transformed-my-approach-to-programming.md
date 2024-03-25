@@ -2,14 +2,15 @@
 title: "How UBC's How to Code Course Transformed My Approach to Programming"
 description: "My experience with UBC's How to Code course and how it changed the way I approach programming problems now. The point isn't to learn a language. The point is to learn a programming paradigm that transcends language entirely."
 pubDatetime: 2023-02-27T00:00:00.000Z
+modDatetime: 2024-03-25T04:19:56.894Z
 tags:
   - review
   - programming
 ---
 
-## Table of Contents
-
 [How to Code Simple Data](https://www.edx.org/course/how-to-code-simple-data) and [How to Code Complex Data](https://www.edx.org/course/how-to-code-complex-data) is a two part MOOC that focuses on teaching a systematic programming method rather than a programming language. This course is based on the book [How to Design Programs](https://htdp.org/2022-8-7/Book/index.html). I completed the course last month. In this blog post, I will write about my experience, and how it changed the way I approach programming problems now.
+
+## Table of Contents
 
 ## My Experience
 

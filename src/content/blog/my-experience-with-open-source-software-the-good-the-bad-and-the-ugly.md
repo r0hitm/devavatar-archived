@@ -1,6 +1,6 @@
 ---
 title: "My Experience with Open Source Software: The Good, The Bad, and The Ugly"
-description: FOSS has become ubiquitous in our lives, with many of us having used FOSS at least once. There are many examples of great FOSS alternatives to paid options, such as LibreOffice, GIMP, and Blender. In fact, Blender has become so good in recent years that it has become an industry standard in the 3D modeling space. FOSS is functional, highly customizable, and easy to modify or extend its abilities. Additionally, if the original developers stop development, the FOSS community can keep the software alive. However, like all software it has its own dark side and in this blog post I will write about my frustrations with OSS.
+description: There are many examples of great FOSS alternatives to paid options, such as LibreOffice, GIMP, and Blender. FOSS is functional, highly customizable, and easy to modify or extend its abilities. However, like all software it has its own dark side and in this blog post I will write about my frustrations with OSS.
 pubDatetime: 2023-04-02T00:00:00.000Z
 modDatetime: 2024-01-29T11:29:01.593Z
 tags:

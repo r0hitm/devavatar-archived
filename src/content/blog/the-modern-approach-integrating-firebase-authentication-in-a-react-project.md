@@ -1,20 +1,20 @@
 ---
 title: "The Modern Approach: Integrating Firebase Authentication in a React Project"
-description: Explore a comprehensive tutorial on seamlessly incorporating Firebase authentication into a React project, leveraging the contemporary Firebase SDK syntax. Transition from the previous class-like pattern to a functional approach for enhanced bundle size reduction through features like tree-shaking. Uncover the intricacies of this newer syntax, which, despite its benefits, lacks extensive documentation and available resources on the internet at the time of writing.
+description: Comprehensive tutorial on seamlessly incorporating Firebase authentication into a React project, leveraging modern functional, instead of previos class-based, syntax of the Firebase SDK. Uncover the intricacies of this newer syntax, which, despite its benefits, lacks extensive documentation and available resources on the internet at the time of writing.
 pubDatetime: 2023-07-09T00:00:00.000Z
-modDatetime: 2024-01-29T11:47:32.924Z
+modDatetime: 2024-03-25T04:34:31.411Z
 tags:
   - tutorial
   - web
 ---
-
-## Table of Contents
 
 Firebase is one of the most popular Backend-as-a-Service solutions for frontend applications, providing a range of functionalities like authentication, database management, and more. Last week, I wanted to add authentication and cloud sync functionality to one of my old projects, which I made in vanilla JS while following [The Odin Project](https://www.theodinproject.com/). Instead of just doing just that, I decided to redo that project in React and it was here that I encountered some challenges, especially when it came to finding resources that utilized the recommended `createBrowserRouter` from React Router v6.4. Additionally, the Firebase documentation wasn't the most user-friendly (though it did bring out a few laughs!), and asking AI tools led me astray and wasted three whole days of my time (Lesson learned: Don't trust AI tools).
 
 Determined not to be defeated, I decided to embark on a mini-project, using React, React Router, and the Firebase Modular API syntax to experiment and design an authentication solution that I want. Finally, after two days of perseverance, I succeeded!
 
 In this blog post, I am excited to share my experience and the technique I used to integrate Firebase authentication seamlessly into my React project.
+
+## Table of Contents
 
 ## Prerequisites
 
@@ -409,6 +409,9 @@ export default function AuthProvider({ children }) {
 
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>;
 }
+
+const AuthProvider = AuthContext.Provider;
+export default AuthProvider;
 ```
 
 The `AuthProvider` component wraps our application and provides access to the authentication context. Inside `AuthProvider`, we use the `useAuth` hook to get the user's authentication state. While the authentication state is loading, we display a loading indicator. Once the authentication state is fetched, we provide the `user` value as the context value.
@@ -440,7 +443,7 @@ However, there's still a missing piece. Users can still directly access the `<Ap
 
 To address this, we'll create two new components: `ProtectedRoute` and `UnprotectedRoute`, which can be used to protect or unprotect specific routes. These components will handle the redirection logic. This approach allows for flexibility and avoids duplicating code, making it easier to add or remove routes in the future if needed.
 
-In the `Protected` component, we use the `useContext` hook to access the `AuthContext`. If the user is not authenticated, we use the `Navigate` component from `react-router-dom` to redirect them to the login page, preserving the current location with the `state` prop.
+In the `Protected` component, we use the `useContext` hook to access the `AuthContext`. If the user is not authenticated, we use the `Navigate` component from `react-router-dom` to redirect them to the login page:
 
 ```jsx
 /* src/Protected.jsx */
@@ -453,7 +456,7 @@ function Protected({ children }) {
   const location = useLocation();
 
   if (!user) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/login" replace />;
   }
 
   return children;

@@ -2,19 +2,19 @@
 title: "Beyond the Hype: How ChatGPT and AI Could Actually Make Us Smarter"
 description: Recently, we have seen a boom in AI technologies, especially large language models (LLMs). This is a revolutionary period for humanity that we are living through. The world is entering a new era the age of AI. So, what is it exactly? Well, contrary to its name, artificial intelligence is actually pretty limited. But that does not mean it cannot benefit us.
 pubDatetime: 2023-03-29T00:00:00.000Z
-modDatetime: 2024-01-29T11:14:58.916Z
+modDatetime: 2024-03-25T04:15:05.284Z
 tags:
   - opinion
   - ai
 ---
-
-## Table of Contents
 
 Recently, we've seen a boom in AI technologies, especially large language models (LLMs). This is a revolutionary period for humanity that we're living through. The world is entering a new era: the age of AI. So, what is it exactly? Well, contrary to its name, artificial intelligence is actually pretty limited. Most contemporary AI is being trained on a vast amount of text data from the internet using deep learning techniques, specifically the transformer architecture in the case of ChatGPT. Given a prompt, it generates a natural language response based on patterns and rules that it "learned" during its training phase. And this process mostly involves predicting the next word in the pattern most effectively.
 
 **Sidenote**: Also see the [unpredictable abilities emerging from large AI models](https://www.quantamagazine.org/the-unpredictable-abilities-emerging-from-large-ai-models-20230316/).
 
 For the purposes of this blog, when I refer to AI, I mean ChatGPT unless otherwise stated, but these things apply to any such technology.
+
+## Table of Contents
 
 ## So, how can AI make us smarter?
 
