@@ -1,7 +1,7 @@
 ---
 title: "Playlisty Devlog: Week 1 Update | Successful Login, Skeleton Routing, and Basic Layout Implemented"
 description: "Follow my journey building Playlisty, a web app for Spotify users like myself. Discover how I'm solving the challenge of tracking songs across playlists and simplifying music organization. Inspired by my own frustration with Spotify, where finding which playlists contain or lack specific songs is often a hassle."
-pubDatetime: 2024-03-26T16:22:13.660Z (`new Date().toISOString()`)
+pubDatetime: 2024-03-25T04:42:06.141Z
 draft: true
 tags:
   - devlog
