@@ -31,5 +31,5 @@ Date must be in ISO format. Use `new Date().toISOString()`.
 
 Final checklist
 
-- [ ] Put images into `src/assets/images/`
+- [ ] Put images into `src/assets/images/` & use `@assets/images/...`
 - [ ] OG image should be 1200 x 640 px
