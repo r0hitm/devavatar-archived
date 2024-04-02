@@ -87,4 +87,4 @@ If you wish to test the app before the official launch or have any feedback or s
 
 Stay tuned for updates by following me on Twitter and/or LinkedIn!
 
-Next devlog live 👉 [Playlisty Devlog: Mid-Week 2 Update](./project-playlisty-devlog-midweek-2)
+Next devlog live 👉 [Playlisty Devlog: Mid-Week 2 Update](/project-playlisty-devlog-midweek-2)
