@@ -1,12 +1,12 @@
 ---
 title: "Playlisty Devlog: Mid-Week 2 Update | Functional Progress"
 description: As I work on Playlisty, it turned out that Spotify Web API does not have endpoint to check if a given song is in a playlist. I have to rethink how to make this happen without slowing the UX or rate limited by Spotify.
-pubDatetime: 2024-03-28T08:15:00.000Z
+pubDatetime: 2024-04-02T11:38:54.128Z
 tags:
   - devlog
 ---
 
-This is a continuation of the previous devlog on Project Playlisty, which I am currently working on. If you haven't read it yet or need a refresher on what this project is about, you can check out the previous post: [Project Playlisty Devlog: Week 1 Update](project-playlisty-devlog-week-1).
+This is a continuation of the previous devlog on Project Playlisty, which I am currently working on. If you haven't read it yet or need a refresher on what this project is about, you can check out the previous post: [Project Playlisty Devlog: Week 1 Update](./project-playlisty-devlog-week-1).
 
 In the last 3 days, I made some considerable progress on the project. In order, they are:
 

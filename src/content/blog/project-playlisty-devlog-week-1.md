@@ -2,7 +2,7 @@
 title: "Playlisty Devlog: Week 1 Update | Successful Login, Skeleton Routing, and Basic Layout Implemented"
 description: "Follow my journey building Playlisty, a web app for Spotify users like myself. Discover how I'm solving the challenge of tracking songs across playlists and simplifying music organization. Inspired by my own frustration with Spotify, where finding which playlists contain or lack specific songs is often a hassle."
 pubDatetime: 2024-03-26T05:40:42.343Z
-modDatetime: 2024-03-28T08:14:00.000Z
+modDatetime: 2024-04-02T11:38:40.480Z
 tags:
   - devlog
 ---
@@ -87,4 +87,4 @@ If you wish to test the app before the official launch or have any feedback or s
 
 Stay tuned for updates by following me on Twitter and/or LinkedIn!
 
-Next devlog live 👉 [Playlisty Devlog: Mid-Week 2 Update](project-playlisty-devlog-midweek-2)
+Next devlog live 👉 [Playlisty Devlog: Mid-Week 2 Update](./project-playlisty-devlog-midweek-2)
