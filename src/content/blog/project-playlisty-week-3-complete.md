@@ -16,7 +16,7 @@ I have submitted the Spotify Quota Extension application, and once it is approve
 
 📺 **Demo video**:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9ssFiGuGMhg?si=Dnl5ZeQN_js-i2Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/9ssFiGuGMhg?si=Dnl5ZeQN_js-i2Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 👉 [**Live Link**](https://playlisty-spotify.vercel.app)
 
