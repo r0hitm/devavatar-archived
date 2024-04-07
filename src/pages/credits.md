@@ -3,13 +3,10 @@ layout: ../layouts/CreditsLayout.astro
 title: "Standing on the Shoulders of Giants"
 ---
 
-## 🙏 Credits
+These are the awesome people and/or resources that helped me set up this website.
 
-These are the awesome people who have helped me in building my blogs.
+- [**Manmeet Singh**](https://www.linkedin.com/in/manmeets-/): My designer friend who helped me with the logo and footer redesign.
+- [**astro-paper**](https://github.com/satnaing/astro-paper): The Astro theme I used as a base with my modifications.
+- **Obsidian**: My go-to for organizing my knowledge and thoughts, that I configured for writing my blogs as well!
 
-- **My friend [Manmeet Singh](https://github.com/manmeet-ms)**: For UI/UX redesign or components and a cool logo.
-- **Template [astro-paper](https://github.com/satnaing/astro-paper)**: For the initial template and inspiration.
-
-Let's not forget the amazing people behind the tools and libraries I used to build this website, to name a few, Astro, React, Tailwind CSS, TypeScript, Vite, ... checkout the `package.json` on the [GitHub repo](https://github.com/r0hitm/devavatar) for the full list.
-
-Another special mention to [Obsidian](https://obsidian.md), my go-to for organizing my knowledge and thoughts, that I configured to write my blogs as well! 🚀
+And the tools & libraries: Astro, React, Tailwind CSS, TypeScript, Vite, etc. Checkout the `package.json` on the [GitHub repo](https://github.com/r0hitm/devavatar) for the full list.

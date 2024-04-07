@@ -1,36 +1,32 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "Who am I?"
 ---
 
-Hi, I'm Rohit Mehta! I'm currently 3rd year BSc (Hons) Electronics student with a fervor for computers and technology ever since high school. My journey involves self-studying Computer Science through programs [OSSU](https://github.com/ossu/computer-science) and [The Odin Project](https://theodinproject.com/). I am driven by a curiosity that compels me to experiment with and explore technology continually.
+I am Rohit Mehta, a computer scientist. I love to build things, automate boring & repetitive things, and I am constantly learning and challenging my technical skills. I can overcome any challenge with patience and perseverance.
 
-My favorite thing about this field is the delightful combination of creativity and real-world problem-solving—a unique blend that keeps me engaged and motivated.
-
-## 🚀 Skills
-
-- **Programming Languages:** TypeScript/JavaScript, Python (Are we counting HTML5/CSS as well?)
-- **Libraries & Frameworks:** React, Express (Node.js), Tailwind CSS, Bootstrap
-- **Databases:** SQLite, Firebase, MongoDB
-- **Version Control:** Git, GitHub
-- **Operating Systems:** Linux, Windows
-- **Editors:** VS Code, Neovim (Vim)
-- **UI/UX:** Figma, GIMP
-- **Human Languages:** English (bilingual), Hindi (native), Japanese (conversational)
+Other than programming, I love anime, music and all things creative and artistic.
 
 ## ⭐ Featured Projects
 
-To be added. Meanwhile, you can check out all my projects on my [GitHub](https://github.com/r0hitm).
+- [**Playlisty for Spotify**](https://github.com/r0hitm/playlisty): A web app to track songs across playlists and organize in a single view. [Read the devlog](/posts/project-playlisty-week-3-complete).
 
-## 📚 Learning
+Go to my [GitHub](https://github.com/r0hitm) for more.
 
-I am currently focusing on expanding my knowledge in the following areas:
+## 💪 Skills
 
-- Discrete Mathematics
-- Data Structures & Algorithms
-- Backend Development
+I don't like to limit myself to a specific technology or language. But for those of you who like to see a list, here is a rundown in no particular order:
 
-## 📫 Contact Me
+- **Technical**: React, TypeScript/JavaScript, Node, Express, Python, Django, Flask, Git/GitHub, SQL, Firebase, Linux, Shell (PowerShell, Bash, Zsh), Docker, REST APIs etc.
+- **Tools**: VS Code, NeoVim, Obsidian, Figma, GIMP, Audacity, etc.
+- **Languages**: हिन्दी/Hindi (Native), English (Bilingual), 日本語/Japanese (Conversational) _(Yes, I watch anime and read manga in Japanese!)_
 
-I'm always open to new opportunities, collaborations and meeting new people. Feel free to connect with me!
-_(PS: See the footer for my socials and email.)_
+## 🕸 I am on the Internet
+
+- **Email**: rohitm09 \[at\] proton.me
+- [LinkedIn](https://linkedin.com/in/r0hitm/)
+- [GitHub](https://github.com/r0hitm)
+- [Twitter](https://twitter.com/_r0hitm)
+- [Telegram](https://t.me/avatar_hiro)
+- [Instagram](https://www.instagram.com/_r0hitm)
+- [Buy me a coffee](https://www.buymeacoffee.com/r0hitm)
