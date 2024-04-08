@@ -2,6 +2,7 @@
 title: "Playlisty Devlog: Week 3 Update | App is complete"
 description: "Project Playlisty for Spotify is functional. This post covers how I worked around an API limit and rest of the development through deployment on Vercel."
 pubDatetime: 2024-04-05T13:54:30.183Z
+modDatetime: 2024-04-08T17:53:11.906Z
 tags:
   - devlog
 ---
@@ -51,7 +52,7 @@ After resolving the API endpoint issue, the rest of the development progressed r
 
 As I began using my own app and gave access to a couple of friends, I identified the following bugs and potential enhancements:
 
-- **BUG**: If a user has more than 50 playlists, only 50 are being fetched [See the Issue](https://github.com/r0hitm/playlisty/issues/1).
+- ~~**BUG**: If a user has more than 50 playlists, only 50 are being fetched [See the Issue](https://github.com/r0hitm/playlisty/issues/1).~~ Fixed.
 - **Enhancement**: [Remove a song from the current playlist](https://github.com/r0hitm/playlisty/issues/2).
 - **Enhancement**: [Sort playlists and songs alphabetically](https://github.com/r0hitm/playlisty/issues/3).
 
