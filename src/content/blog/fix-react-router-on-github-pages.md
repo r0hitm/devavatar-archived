@@ -2,6 +2,7 @@
 title: Fixing broken Client-Side React Router on GitHub Pages Deployment
 description: The reasons behind the malfunctioning of React Router of a React App deployed on GitHub Pages and three strategies to fix this.
 pubDatetime: 2024-03-11T09:12:27.940Z
+modDatetime: 2024-04-09T04:58:59.453Z
 tags:
   - web
   - debug
@@ -14,7 +15,7 @@ Here's the deal:
 - GitHub Pages doesn't support client-side routing out of the box unless all routes are children of `/`.
 - **Solutions**, do either of the following:
   1. Use [HashRouter](https://reactrouter.com/en/main/router-components/hash-router), or
-  2. Make all routes children of `/`, or
+  2. Make all routes children of `/`, (**Note**: This may not solve the problem properly, and may still result in 404 if the user _refreshes_ the page on a sub-route) or
   3. Consider deploying elsewhere, like [Vercel](https://vercel.com/)
 
 **Note**: Deploying a serverless web app on Vercel may encounter a bug where routes other than index don't work. To fix it, create a `vercel.json` at the root of the project ([Source](https://stackoverflow.com/a/65644138/10857172)):
