@@ -2,12 +2,13 @@
 title: "Syncing Obsidian for Free: Empower Your Workflow on Any Device"
 description: Step-by-Step tutorial for setting up Git and GitHub to sync Obsidian notes between multiple devices for free.
 pubDatetime: 2023-06-07T00:00:00.000Z
-modDatetime: 2024-03-25T04:28:07.277Z
+modDatetime: 2024-04-13T03:43:39.154Z
 tags:
   - tutorial
 ---
 
-[Obsidian](https://obsidian.md/) is more than just a note-taking app—it's a powerful tool for organizing your thoughts and ideas. In this blog post, I'll be sharing my personal setup for syncing Obsidian notes between multiple devices (except iPhone) using Git and GitHub. Note that I'll assume that you're already familiar with Git and GitHub. So, let's dive in!
+[Obsidian](https://obsidian.md/) is more than just a note-taking app—it's a powerful tool for organizing your thoughts and ideas. In this blog post, I'll be sharing my personal setup for syncing Obsidian notes between multiple devices (except iPhone) using Git and GitHub.
+**Prerequisites**: I assume that you can work with basic CLI and are familiar with Git and GitHub.
 
 ## Table of Contents
 
@@ -23,7 +24,6 @@ Assuming you have Git installed and configured with your username and email (usi
 .obsidian/workspace-mobile.json
 .obsidian/workspace.json
 .obsidian/workspaces.json
-.obsidian/graph.json
 .obsidian/cache
 .trash/
 .DS_Store
@@ -58,22 +58,54 @@ $ pkg upgrade
 $ pkg install gnupg openssh git gh
 
 # (optional) If you have GPG commit signing keys, import them.
-# Set up SSH to access your GitHub repositories (refer to GitHub Docs).
-# Configure your Git settings (or copy .gitconfig from PC to ~)
 
 # Authenticate Termux using GitHub CLI.
 $ gh auth login
 # Use SSH for repository access when prompted by the command.
+# This automatically sets up a SSH key and adds to your GitHub Account.
+
+# Configure your Git settings (or copy .gitconfig from PC to ~)
 
 # Now, navigate to ~/storage/shared and clone your notes.
 $ cd ~/storage/shared
 $ git clone git@github.com:YOUR-USERNAME/YOUR-NOTES-REPO
 
-# Disabling commit signing (see the last paragraph of pervious section)
+# It is likely that you'll get following error & git will not work
+$ cd Notes
+$ git status
+fatal: detected dubious owenership in repository at '<LOCATION>'
+
+To add an exception for this repository, call:
+     git config --global --add safe.directory <LOCATION>
+
+# Go ahead and run this command.
+
+# Finally, disable commit signing (see the last paragraph of pervious section)
 $ git config commit.gpgsign false
 ```
 
-Unfortunately, Obsidian Git doesn't work on mobile devices as intended and it's best to check the `Disable on this Device` of the plugin for the mobile devices. However, you can use a script to sync your notes using Termux. While it's possible to automate this script using Tasker or a cron job, that would require running an app in the background constantly. To preserve battery life, I prefer using the Termux:Widget addon to create a launcher icon for the script. I place it beside Obsidian and run it before opening and after closing the app. This way, my notes sync only when I need them, saving precious battery power.
+Unfortunately, Obsidian Git doesn't work on mobile devices as intended and it's best to check the `Disable on this Device` of the plugin for the mobile devices.
+
+### Making syncing a click away
+
+I use a script to sync my notes using [Termux](https://termux.dev) (Get the F-Droid version, it's more up to date). It's possible to automate this script using Tasker or a cron job, to run in the background constantly.
+To preserve battery life, I prefer using the `Termux:Widget` addon to create a launcher icon for the script. I place it beside Obsidian icon on my home screen. This way, my notes sync only when I need them, saving precious battery power.
+
+You can refer to the wiki for more Termux:widget options. But here is my minimal working setup:
+
+```bash
+$ mkdir -p ~/.shortcuts
+$ chmod 700 -R ~/.shortcuts
+
+# Use any editor to copy the sync script,
+# I am using neovim (pkg install neovim)
+$ nvim ~/.shortcuts/sync.bash
+
+# Copy over the sync-script see below.
+
+# After saving, fix shebangs (Termux specific thing)
+$ termux-fix-shebang ~/.shortcuts/sync.bash
+```
 
 ### Sync Script
 
@@ -111,23 +143,5 @@ fi
 echo "Sync completed successfully."
 read -n 1 -s -r -p "Press any key to exit..."
 ```
-
-### Create Laucher Icon for the Sync Script
-
-You can refer to the wiki for more Termux:widget options. But here is my minimal working setup:
-
-```bash
-$ mkdir -p ~/.shortcuts
-$ chmod 700 -R ~/.shortcuts
-
-# Use any editor to copy the sync script,
-# I am using neovim (pkg install neovim)
-$ nvim ~/.shortcuts/sync.bash
-
-# Fix shebangs (Termux specific thing)
-$ termux-fix-shebang ~/.shortcuts/sync.bash
-```
-
-Now you can add `Termux:Widget` shortcut to your home screen to quickly run the sync script.
 
 ![taking notes gif](https://media.tenor.com/hph-YFUYCvUAAAAC/my-hero-academia-izuku.gif)
