@@ -17,9 +17,9 @@ ogImage: default is SITE.ogImage or generated OG image (need to look into it)
 canonicalURL: default = Astro.site + Astro.url.pathname (optional)
 ---
 
-Users cannot see this post because it is in draft.
-
 Date must be in ISO format. Use `new Date().toISOString()`.
+
+Users cannot see this post because it is in draft.
 
 (remove the next heading if no headings in the post)
 
@@ -28,8 +28,6 @@ Date must be in ISO format. Use `new Date().toISOString()`.
 ...rest of the blog...
 
 ---
-
-Final checklist
 
 - [ ] Put images into `src/assets/images/` & use `@assets/images/...`
 - [ ] OG image should be 1200 x 640 px

@@ -7,6 +7,8 @@ tags:
   - discrete-math
 ---
 
+POSSIBLE TO MAKE THIS ABOUT INTERESTING FACTS/BEHAVIOURS ON CONDITIONALS & LOGIC?? Yes -> Do that, No -> Reconsider this as all of this is properly taught in any discrete math class, can't see the point of this blogpost.
+
 ; making sense of conditional statements
 ; conditional statements: do you really know them as well as you think you do?
 ; math of conditional statements: clearing all the common misconceptions & confusions
