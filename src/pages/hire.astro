@@ -1,0 +1,124 @@
+---
+import { SITE } from "@config";
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title={`For Hire | ${SITE.title}`}>
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content">
+    <section>
+      <h1>Want to work together?</h1>
+      <p>
+        I am actively looking for new opportunities to work with great people
+        and companies. I am available for freelance work, contract work, and
+        full-time employment. I am also open to collaborations and partnerships.
+      </p>
+      <h2>👨‍💻 Work Experience</h2>
+      <h3>Freelance Developer (2024 - Present): Remote</h3>
+      <ul>
+        <li>
+          Developed Twitter bot with Cardano blockchain integration using Python
+          for a Netherland-based company.
+        </li>
+        <li>
+          Managed up to 700 posts fetching and up to 100 replies under Twitter
+          API v2 rate limits.
+        </li>
+        <li>
+          Achieved &lt; 5s response time, for fetching any block from Cardano.
+        </li>
+      </ul>
+
+      <h2>📚 Skills</h2>
+      <ul>
+        <li>
+          <strong>Technical</strong>:React, TypeScript, JavaScript, Python
+        </li>
+        <li>
+          <strong>Tools</strong>: VS Code, NeoVim, Figma, Git, GitHub
+        </li>
+      </ul>
+
+      <h2>⭐ Featured Projects</h2>
+      <h3>Playlist for Spotify</h3>
+      <p>
+        A web app to track songs across playlists and organize in a single view. <a
+          href="/posts/project-playlisty-week-3-complete"
+          >Read the development logs here</a
+        >.
+        <ul>
+          <li>
+            Identified Spotify’s lack of feature to not being able to see in
+            which playlists a given song is or is not in and move among them
+            efficiently.
+          </li>
+          <li>
+            Conceptualized and developed a web app that enables users to do this
+            in React, TypeScript, Spotify API.
+          </li>
+          <li>
+            Resolved the lack of a Spotify endpoint to check if a song is in a
+            playlist by implementing parallel requests to populate playlists
+            locally and run query on them for the core functionality, for faster
+            load times.
+          </li>
+        </ul>
+      </p>
+      <p>
+        Go to my <a href="https://github.com/r0hitm">GitHub</a> for more.
+      </p>
+
+      Email me at <a class="email-link" href="mailto:rohitm09@proton.me"
+        >rohitm09@proton.me</a
+      >
+      to discuss your project or job opportunity.
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  section {
+    @apply mb-5;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply mt-4 text-2xl font-bold;
+  }
+
+  h3 {
+    @apply mt-3 text-xl font-bold;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+  }
+
+  li {
+    @apply my-2 ml-4;
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  section {
+    @apply mx-auto max-w-3xl px-4;
+  }
+
+  .email-link {
+    @apply underline;
+  }
+
+  a {
+    @apply underline;
+  }
+</style>
