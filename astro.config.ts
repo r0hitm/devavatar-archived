@@ -17,14 +17,15 @@ export default defineConfig({
     sitemap({
       serialize(sitemap_item) {
         const url = sitemap_item.url;
-        const isRoot = /^\/$/.test(url);
-        const isPost =
-          /^\/posts\/[^\/]+$/.test(url) && !/^\/posts\/1$/.test(url);
-        const isAbout = /^\/about$/.test(url);
-        const isCredits = /^\/credits$/.test(url);
-        const isHire = /^\/hire$/.test(url);
+        const isRoot = /devavatar.com\/$/.test(url);
+        const isAbout = /about\/$/.test(url);
+        const isCredits = /credits\/$/.test(url);
+        const isHire = /hire\/$/.test(url);
+        const postSlug = url.match(/\/posts\/([^\/]+)\/?$/)?.[1] ?? false;
+        const isPost = postSlug && isNaN(Number(postSlug));
+        // console.log({ url, isRoot, isPost, isAbout, isCredits, isHire });
 
-        if (isRoot || isPost || isAbout || isCredits || isHire) {
+        if (isRoot || isAbout || isCredits || isHire || isPost) {
           return sitemap_item;
         } else {
           return undefined;
