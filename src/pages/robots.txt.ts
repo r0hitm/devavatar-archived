@@ -6,14 +6,12 @@ User-agent: Googlebot
 Disallow: /nogooglebot/
 
 User-agent: *
+Disallow: /tags/
 Allow: /$
 Allow: /about/
 Allow: /credits/
 Allow: /hire/
-Disallow: /posts/$
-Disallow: /posts/[0-9]+/
-Allow: /posts/*
-Disallow: /tags/
+Allow: /posts/
 
 Sitemap: ${new URL("sitemap-index.xml", SITE.website).href}
 `.trim();
