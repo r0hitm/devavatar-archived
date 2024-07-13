@@ -14,7 +14,23 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     react(),
-    sitemap(),
+    sitemap({
+      serialize(sitemap_item) {
+        const url = sitemap_item.url;
+        const isRoot = /^\/$/.test(url);
+        const isPost =
+          /^\/posts\/[^\/]+$/.test(url) && !/^\/posts\/1$/.test(url);
+        const isAbout = /^\/about$/.test(url);
+        const isCredits = /^\/credits$/.test(url);
+        const isHire = /^\/hire$/.test(url);
+
+        if (isRoot || isPost || isAbout || isCredits || isHire) {
+          return sitemap_item;
+        } else {
+          return undefined;
+        }
+      },
+    }),
   ],
   markdown: {
     remarkPlugins: [
