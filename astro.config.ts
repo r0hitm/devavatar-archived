@@ -20,12 +20,12 @@ export default defineConfig({
         const isRoot = /devavatar.com\/$/.test(url);
         const isAbout = /about\/$/.test(url);
         const isCredits = /credits\/$/.test(url);
-        const isHire = /hire\/$/.test(url);
+        // const isHire = /hire\/$/.test(url); // Temporarily removed
         const postSlug = url.match(/\/posts\/([^\/]+)\/?$/)?.[1] ?? false;
         const isPost = postSlug && isNaN(Number(postSlug));
         // console.log({ url, isRoot, isPost, isAbout, isCredits, isHire });
 
-        if (isRoot || isAbout || isCredits || isHire || isPost) {
+        if (isRoot || isAbout || isCredits || isPost) {
           return sitemap_item;
         } else {
           return undefined;
