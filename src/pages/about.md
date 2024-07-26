@@ -7,6 +7,4 @@ I am Rohit Mehta, a computer scientist. I love to build things, automate boring 
 
 Other than programming, I love anime, music and all things creative and artistic.
 
-### Important Message
-
-_I'm re-configuring this site at the moment, so please bear with me! I should be able to have it done as soon as my college exams are over!_
+I am currently working as Lead Front-End Developer at a Netherland-based startup, AdaMoments.io.
