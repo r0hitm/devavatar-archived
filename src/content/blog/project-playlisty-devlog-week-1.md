@@ -40,7 +40,7 @@ The following aspects are currently out of scope:
 
 ## Week 1 Progress
 
-I am developing this project with [React + TypeScript + Vite](eslint-and-prettier-in-react-ts-project-setup) and using the official [Spotify Web API TypeScript SDK](https://github.com/spotify/spotify-web-api-ts-sdk).
+I am developing this project with [React + TypeScript + Vite](/posts/eslint-and-prettier-in-react-ts-project-setup) and using the official [Spotify Web API TypeScript SDK](https://github.com/spotify/spotify-web-api-ts-sdk).
 
 ### Challenges
 
