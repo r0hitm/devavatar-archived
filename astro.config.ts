@@ -8,6 +8,10 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
+  redirects: {
+    "/admin": "/admin/index.html",
+    "/posts/1/": "/posts/",
+  },
   site: SITE.website,
   integrations: [
     tailwind({
