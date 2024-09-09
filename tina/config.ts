@@ -32,6 +32,7 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "content/posts",
+        format: "md",
         fields: [
           {
             type: "string",
@@ -39,6 +40,54 @@ export default defineConfig({
             label: "Title",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Description",
+          },
+          {
+            type: "string",
+            name: "author",
+            label: "Author",
+            required: true,
+          },
+          {
+            type: "datetime",
+            name: "pubDatetime",
+            label: "Publication Date",
+            required: true,
+          },
+          {
+            type: "datetime",
+            name: "modDatetime",
+            label: "Modification Date",
+          },
+          {
+            type: "boolean",
+            name: "featured",
+            label: "Featured",
+          },
+          {
+            type: "boolean",
+            name: "draft",
+            label: "Draft",
+          },
+          {
+            type: "string",
+            name: "tags",
+            label: "Tags",
+            list: true,
+          },
+          {
+            type: "image",
+            name: "ogimage",
+            label: "OG Image",
+          },
+          {
+            type: "string",
+            name: "canonicalURL",
+            label: "Canonical URL",
           },
           {
             type: "rich-text",
