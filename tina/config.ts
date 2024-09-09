@@ -33,6 +33,13 @@ export default defineConfig({
         label: "Posts",
         path: "content/posts",
         format: "md",
+        defaultItem: () => {
+          return {
+            title: "New Post",
+            description: "New post awakens! This is for the meta description.",
+            draft: true,
+          }
+        },
         fields: [
           {
             type: "string",
@@ -50,7 +57,6 @@ export default defineConfig({
             type: "string",
             name: "author",
             label: "Author",
-            required: true,
           },
           {
             type: "datetime",
@@ -81,7 +87,7 @@ export default defineConfig({
           },
           {
             type: "image",
-            name: "ogimage",
+            name: "ogImage",
             label: "OG Image",
           },
           {
