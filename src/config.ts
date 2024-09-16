@@ -56,8 +56,8 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "X",
-    href: "https://twitter.com/_r0hitm",
-    linkTitle: `Twitter`,
+    href: "https://x.com/_r0hitm",
+    linkTitle: `X (Twitter)`,
     active: true,
   },
   {
@@ -140,8 +140,8 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Mastodon",
-    href: "#",
-    linkTitle: `${SITE.title} on Mastodon`,
-    active: false,
+    href: "https://mastodon.social/@_r0hitm",
+    linkTitle: `Follow me on Mastodon`,
+    active: true,
   },
 ];
