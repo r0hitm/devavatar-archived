@@ -4,7 +4,7 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [main]
+    branches: [ main ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -20,13 +20,6 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
-
-      - name: Build TinaCMS
-        env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: npx tinacms build
-
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:

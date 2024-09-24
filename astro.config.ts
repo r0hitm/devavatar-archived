@@ -8,10 +8,6 @@ import { SITE } from "./src/config";
 
 // https://astro.build/config
 export default defineConfig({
-  redirects: {
-    "/admin": "/admin/index.html",
-    "/posts/1/": "/posts/",
-  },
   site: SITE.website,
   integrations: [
     tailwind({
@@ -26,7 +22,7 @@ export default defineConfig({
         const isCredits = /credits\/$/.test(url);
         // const isHire = /hire\/$/.test(url); // Temporarily removed
         const postSlug = url.match(/\/posts\/([^\/]+)\/?$/)?.[1] ?? false;
-        const isPost = postSlug && isNaN(parseInt(postSlug, 10));
+        const isPost = postSlug && isNaN(Number(postSlug));
         // console.log({ url, isRoot, isPost, isAbout, isCredits, isHire });
 
         if (isRoot || isAbout || isCredits || isPost) {
