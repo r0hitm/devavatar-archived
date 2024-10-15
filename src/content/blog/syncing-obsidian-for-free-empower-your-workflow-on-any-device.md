@@ -1,18 +1,50 @@
 ---
-title: "Syncing Obsidian for Free: Empower Your Workflow on Any Device"
-description: Step-by-Step tutorial for setting up Git and GitHub to sync Obsidian notes between multiple devices for free.
+title: "Updated: Syncing Obsidian across Multiple Devices Using Git and/or Syncthing for Free"
+description: Step-by-Step tutorial for setting up Obsidian Vault sync across devices for free, using git version control or via Syncthing.
 pubDatetime: 2023-06-07T00:00:00.000Z
-modDatetime: 2024-04-13T03:43:39.154Z
+modDatetime: 2024-10-15T15:13:48.999Z
 tags:
   - tutorial
 ---
 
-[Obsidian](https://obsidian.md/) is more than just a note-taking app—it's a powerful tool for organizing your thoughts and ideas. In this blog post, I'll be sharing my personal setup for syncing Obsidian notes between multiple devices (except iPhone) using Git and GitHub.
-**Prerequisites**: I assume that you can work with basic CLI and are familiar with Git and GitHub.
+[Obsidian](https://obsidian.md/) is more than just a note-taking app — it's a powerful tool for organizing your thoughts and ideas. In this blog post, I'll be sharing my personal setup for syncing Obsidian notes between multiple devices (except iPhone) using Git/GitHub and Syncthing.
+
+**Updated**: Now you do not need to be terminal savvy to set up the sync that uses Syncthing. _This is recommended if you are not familiar with Git/terminal_.
 
 ## Table of Contents
 
-## Desktop (PC or Mac)
+## Method 1 (Using Syncthing)
+
+This is the general method that I recommend to most users because it is simpler and allows for configuring more than two devices quickly. The only requirement is that any device that you set up for the sync must be connected to the same network, not always, but occasionally, whenever you have something to sync.
+
+**Optional**: If you're going to also use Method 2 along with this method, then add `.stfolder` to the `.gitignore` file. And create `.stignore` and add `.git`.
+
+1. Download and install Syncthing from the official website for your devices. \[[Syncthing Download Page](https://syncthing.net/downloads/)\]. Refer to Syncthing documentation. (Install the F-Droid version on Android.)
+2. Connect them to the same network.
+
+### Desktop (PC/Mac)
+
+1. Let's set up sync from the desktop. Visit the config page in the browser (usually http://localhost:8384/).
+2. Click the menu on the top-left bar -> show QR. Now scan this via the mobile client of Syncthing to connect. Or manually enter the string to a different computer. If this is successful, you should now see that device under "Connected Devices" on the same page.
+3. On the left, click 'Add folder' and choose your Obsidian vault. Give it a name and note down the ID (auto-generated but editable; I recommend giving it a friendly name like "notes"). Under the share tab, check your connected device so that it is actually synced.
+
+### Mobile/Another Computer
+
+(Assuming you didn't skip the above section.)
+
+1. Similarly, add a folder (create it if it doesn't exist) on your mobile/another computer, and give it a label.
+2. VERY IMPORTANT: **Change the ID (key icon) to match the ID of the folder from the first computer.**
+3. Toggle/select the first computer to give it share permission.
+
+If everything is correct, you should see the status of the folder being updated to "preparing to sync" -> "syncing" -> "idle."
+
+Now, any changes made on any device will be automatically synced whenever they're on the same network.
+
+## Method 2 (Using Git/GitHub)
+
+This method is for those who are relatively familiar with Git and want to also version control their notes. I use this now for backing up my notes to GitHub. Since Termux doesn't work nicely on newer Android versions, I use Syncthing for my mobile <-> PC syncing now.
+
+### Desktop (PC or Mac)
 
 Assuming you have Git installed and configured with your username and email (using the same email associated with your GitHub account), follow these steps:
 
@@ -27,6 +59,7 @@ Assuming you have Git installed and configured with your username and email (usi
 .obsidian/cache
 .trash/
 .DS_Store
+.stfolder # if you're also using Method 1
 ```
 
 1. Commit all the changes you made.
@@ -40,7 +73,9 @@ Assuming you have Git installed and configured with your username and email (usi
 
 **Note 2**: Obsidian uses LF line endings, so it might break the newline characters on devices that use different line endings (say Windows and Mac) because on Windows, git auto converts LF line endings to CRLF (windows default). If you run into this issue, make sure you disable `autocrlf` using: `git config core.autocrlf false`.
 
-## Android
+### Android
+
+**Note**: I have not seen any recent developments on Termux for a while, and it may result in issues if you run it on recent Android versions (13+). I have set up Method 1 specifically for my phone for this reason.
 
 To sync your Obsidian notes on Android, follow these steps:
 
@@ -86,7 +121,7 @@ $ git config commit.gpgsign false
 
 Unfortunately, Obsidian Git doesn't work on mobile devices as intended and it's best to check the `Disable on this Device` of the plugin for the mobile devices.
 
-### Making syncing a click away
+#### Making syncing a click away
 
 I use a script to sync my notes using [Termux](https://termux.dev) (Get the F-Droid version, it's more up to date). It's possible to automate this script using Tasker or a cron job, to run in the background constantly.
 To preserve battery life, I prefer using the `Termux:Widget` addon to create a launcher icon for the script. I place it beside Obsidian icon on my home screen. This way, my notes sync only when I need them, saving precious battery power.
@@ -107,7 +142,7 @@ $ nvim ~/.shortcuts/sync.bash
 $ termux-fix-shebang ~/.shortcuts/sync.bash
 ```
 
-### Sync Script
+#### Sync Script
 
 ```bash
 #!/bin/bash
@@ -143,5 +178,9 @@ fi
 echo "Sync completed successfully."
 read -n 1 -s -r -p "Press any key to exit..."
 ```
+
+---
+
+Happy noting (_is this even a word?!_) 📝
 
 ![taking notes gif](https://media.tenor.com/hph-YFUYCvUAAAAC/my-hero-academia-izuku.gif)
