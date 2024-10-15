@@ -26,11 +26,17 @@ export default defineConfig({
         // console.log({ url, isRoot, isPost, isAbout, isCredits, isHire });
 
         if (isRoot || isAbout || isCredits || isPost) {
+          if (isPost) {
+            sitemap_item.priority = 1;
+          }
           return sitemap_item;
         } else {
           return undefined;
         }
       },
+      changefreq: "weekly",
+      lastmod: new Date(),
+      priority: 0.8,
     }),
   ],
   markdown: {
