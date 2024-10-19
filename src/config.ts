@@ -58,7 +58,7 @@ export const SOCIALS: SocialObjects = [
     name: "X",
     href: "https://x.com/_r0hitm",
     linkTitle: `X (Twitter)`,
-    active: true,
+    active: false,
   },
   {
     name: "Twitch",
@@ -136,7 +136,7 @@ export const SOCIALS: SocialObjects = [
     name: "Telegram",
     href: "https://t.me/avatar_hiro",
     linkTitle: `Send me text on Telegram`,
-    active: true,
+    active: false,
   },
   {
     name: "Mastodon",
