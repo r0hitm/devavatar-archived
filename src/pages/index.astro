@@ -44,23 +44,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <p>
         Hi there! I'm Rohit, and welcome to Dev Avatar, my technical blog where
         I write about things I am working/learning, development logs, and other
-        things involving a computer.
+        things involving a computer. Major interests and likes include
+        computers, japanese culture, anime, and exercise.
       </p>
-      <p>
-        Feel free to explore the recent posts, browse by tags, or search for
-        specific topics you're interested in. Feedback and suggestions are
-        always welcome!
-      </p>
+      <p>Feedback and suggestions are always welcome!</p>
 
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Let's connect:</div>
-            <Socials />
-          </div>
-        )
-      }
+      <p>
+        Drop me a message and/or a follow:
+        {
+          // only display if at least one social link is enabled
+          socialCount > 0 && <Socials />
+        }
+      </p>
     </section>
 
     <Hr />
@@ -138,12 +133,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   #hero p {
     @apply my-2;
-  }
-  .social-wrapper {
-    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
-  }
-  .social-links {
-    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */
