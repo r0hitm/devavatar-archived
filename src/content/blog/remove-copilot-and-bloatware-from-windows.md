@@ -2,6 +2,7 @@
 title: 'Removing Windows Bloatware, Spyware and Unwanted "AI" Features'
 description: I'm sick of the fact that Windows keeps adding bloatware, spyware and "AI" features like Copilot and Recall 🗑️.
 pubDatetime: 2024-10-19T17:53:48.595Z
+modDatetime: 2024-10-21T16:25:46.866Z
 tags:
   - tutorial
 ---
@@ -60,3 +61,11 @@ Download [Winaero Tweaker](https://winaerotweaker.com/) to bring back features l
 ## 7. ⚠️ Warning: Upcoming 24H2 Update is Making Recall Mandatory!
 
 In a really low move by Microsoft, the 24H2 update is making "Recall" an Explorer dependency, so disabling it may break Explorer. For now, **don't update**. Let's see how this plays out. If things go south, Linux is bound to get more traffic — and that's a good thing!
+
+Here's the command to disable it just in case:
+
+![Disble Recall Windows Feature](@assets/images/remove-copilot-and-bloatware-from-windows/disable-recall.png)
+
+```
+Dism /Online /Disable-Feature /Featurename:Recall
+```
