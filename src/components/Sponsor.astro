@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const bmc_text = "Buy me a coffee";
 const bmc_button_color = "ff813f";
 const bmc_font_color = "fff";
@@ -33,13 +35,21 @@ const bmc_img_link =
   </a>
   &nbsp;&nbsp;
   <a href="https://www.buymeacoffee.com/r0hitm">
-    <img class="bmc-img" src={bmc_img_link} alt="Buy Me a Coffee Button" />
+    <Image
+      class="bmc-img"
+      src={bmc_img_link}
+      alt="Buy Me a Coffee Button"
+      loading="lazy"
+      decoding="async"
+      width="144"
+      height="36"
+    />
   </a>
 </div>
 
 <style>
   .sponsors {
-    @apply flex items-center justify-between mb-3;
+    @apply mb-3 flex items-center justify-between;
   }
   .sponsors > * {
     @apply inline-block rounded-lg hover:rotate-3;
