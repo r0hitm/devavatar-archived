@@ -144,4 +144,10 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `Follow me on Mastodon`,
     active: true,
   },
+  {
+    name: "Bluesky",
+    href: "https://bsky.app/profile/devavatar.com",
+    linkTitle: `Follow me on Bluesky`,
+    active: true,
+  },
 ];
