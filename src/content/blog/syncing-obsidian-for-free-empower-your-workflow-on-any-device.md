@@ -2,7 +2,7 @@
 title: "Updated: Syncing Obsidian across Multiple Devices Using Git and/or Syncthing for Free"
 description: Step-by-Step tutorial for setting up Obsidian Vault sync across devices for free, using git version control or via Syncthing.
 pubDatetime: 2023-06-07T00:00:00.000Z
-modDatetime: 2024-10-15T15:13:48.999Z
+modDatetime: 2024-12-30T07:30:26.160Z
 tags:
   - tutorial
 ---
@@ -19,7 +19,7 @@ This is the general method that I recommend to most users because it is simpler 
 
 **Optional**: If you're going to also use Method 2 along with this method, then add `.stfolder` to the `.gitignore` file. And create `.stignore` and add `.git`.
 
-1. Download and install Syncthing from the official website for your devices. \[[Syncthing Download Page](https://syncthing.net/downloads/)\]. Refer to Syncthing documentation. (Install the F-Droid version on Android.)
+1. Download and install Syncthing from the official website for your devices. \[[Syncthing Download Page](https://syncthing.net/downloads/)\]. ~~(Install the F-Droid version on Android.)~~ For Android, use the [Synthing-Fork](https://github.com/Catfriend1/syncthing-android/releases) because the official android client has been discontinued.
 2. Connect them to the same network.
 
 ### Desktop (PC/Mac)
