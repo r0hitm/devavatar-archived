@@ -85,7 +85,7 @@ const shareLinks = [
       await navigator.share({
         title: document.title,
         text: "Check out this amazing post!",
-        url: URL.toString(),
+        url: document.location.href,
       });
     } catch (err) {
       console.error("Error sharing:", err);
