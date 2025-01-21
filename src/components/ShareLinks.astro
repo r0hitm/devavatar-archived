@@ -10,26 +10,31 @@ const shareLinks = [
     href: "https://wa.me/?text=",
     linkTitle: `WhatsApp`,
   },
+  // {
+  //   name: "Facebook",
+  //   href: "https://www.facebook.com/sharer.php?u=",
+  //   linkTitle: `Facebook`,
+  // },
   {
-    name: "Facebook",
-    href: "https://www.facebook.com/sharer.php?u=",
-    linkTitle: `Facebook`,
+    name: "Bluesky",
+    href: "https://bsky.app/intent/compose?text=Check%20out%20this%20amazing%20post%21%20",
+    linkTitle: `Share on Bluesky`,
   },
   {
     name: "X",
     href: "https://twitter.com/intent/tweet?via=_r0hitm%20&url=",
     linkTitle: `X (Twitter)`,
   },
-  {
-    name: "Telegram",
-    href: "https://t.me/share/url?url=",
-    linkTitle: `Telegram`,
-  },
-  {
-    name: "Pinterest",
-    href: "https://pinterest.com/pin/create/button/?url=",
-    linkTitle: `Pinterest`,
-  },
+  // {
+  //   name: "Telegram",
+  //   href: "https://t.me/share/url?url=",
+  //   linkTitle: `Telegram`,
+  // },
+  // {
+  //   name: "Pinterest",
+  //   href: "https://pinterest.com/pin/create/button/?url=",
+  //   linkTitle: `Pinterest`,
+  // },
   {
     name: "Mail",
     href: "mailto:?subject=See%20this%20post&body=",
@@ -47,13 +52,20 @@ const shareLinks = [
           href={`${social.href + URL}`}
           className="link-button"
           title={social.linkTitle}
-          target="_blank"
-        >
+          target="_blank">
           <Fragment set:html={socialIcons[social.name]} />
           <span class="sr-only">{social.linkTitle}</span>
         </LinkButton>
       ))
     }
+    <!-- Share (via system navigator share) -->
+    <button
+      class="link-button group inline-block hover:text-skin-accent"
+      title="Share"
+      id="share-button">
+      <Fragment set:html={socialIcons["Share"]} />
+      <span class="sr-only">Share</span></button
+    >
   </div>
 </div>
 
@@ -65,3 +77,18 @@ const shareLinks = [
     @apply scale-90 p-2 hover:rotate-6 sm:p-1;
   }
 </style>
+
+<script>
+  const shareBtn = document.getElementById("share-button");
+  shareBtn?.addEventListener("click", async () => {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: "Check out this amazing post!",
+        url: URL.toString(),
+      });
+    } catch (err) {
+      console.error("Error sharing:", err);
+    }
+  });
+</script>
