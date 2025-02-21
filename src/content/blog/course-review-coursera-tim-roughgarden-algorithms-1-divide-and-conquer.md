@@ -11,7 +11,7 @@ tags:
 
 [Divide and Conquer, Sorting and Searching, and Randomized Algorithms](https://www.coursera.org/learn/algorithms-divide-conquer)
 is the first course in [OSSU Core Theory](https://github.com/ossu/computer-science?tab=readme-ov-file#core-theory). I completed
-the course between January 22 and February 15, 2025. This review covers each module's content, difficulty level, and prerequisites to help you gauge your readiness for the course.
+the course between December 22, 2024 and February 15, 2025. This review covers each module's content, difficulty level, and prerequisites to help you gauge your readiness for the course.
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ This module explores the "Divide-and-Conquer" paradigm through:
 - [**The Master Method**](<https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)>) for solving recurrence relations for divide and conquer algorithms. This is more math-y part of the paradigm, where we write an recurrence relation for the recursive algorithm, mostly in the form of T(n) = aT(n/b) + O(n^d), and then use the Master Method to find the time complexity of the algorithm. Here, a = number of subproblems at each step, b = factor by which the input size is reduced, and d = exponent in the running time of the "combine" step. How these variables are related depends on the implemenation, and we get one of the three cases of the Master Method:
   - Case 1: If a = b^d, then the time complexity is O(n^d * log(n)); *number of subproblems at each step is equal to the factor by which the input size is reduced\*
   - Case 2: If a < b^d, then the time complexity is O(n^d); _number of subproblems at each step is less than the factor by which the input size is reduced - more work is done towards the root of the recursion tree_
-  - Case 3: If a > b^d, then the time complexity is O(n^log_b(a)); _number of subproblems at each step is more than the factor by which the input size is reduced - more work is done towards the leaves of the recursion tree_
+  - Case 3: If a > b^d, then the time complexity is O(n^log*b(a)); \_number of subproblems at each step is more than the factor by which the input size is reduced - more work is done towards the leaves of the recursion tree*
 
 ## Module 3: Quick Sort
 
@@ -52,15 +52,15 @@ QuickSort (array A, length n):
 
 Key insight lies in the choice of pivot element. _We let the algorithm pick a pivot element uniformly at random_, then partition the array around the pivot: elements less than the pivot to the left, and elements greater than the pivot to the right. This is done in linear time O(n). The algorithm then recursively sorts the two partitions. And we're done! Notice the simplicity? The elegance? THE BEAUTY?! 😍
 
-The mathematical analysis and proof was challenging. Prerequisites mathematical knowledge of Probability and expectation analysis is rquired. The course has a couple refresher videos on the topics used in the analysi, but it's better to have a good understanding of the topics beforehand.
+The mathematical analysis and proof was challenging. Prerequisites mathematical knowledge of Probability and expectation analysis is required. The course has a couple refresher videos on the topics used in the analysis, but it's better to have a good understanding of the topics beforehand.
 
-Another intersting mathematical fact is that it is impossible to sort an array faster than O(n log n) using a comparison-based sorting algorithm.
+Another interesting mathematical fact is that it is impossible to sort an array faster than O(n log n) using a comparison-based sorting algorithm.
 
 ## Module 4: Linear Time Selection and Graph Cuts
 
 **Difficulty: ★★★★★ (Very Challenging)**
 
-The module starts with selecting i-th order statistics, or in plain english i-th element of an N-element sequence sorted in ascending order. The randomized approach builds on quicksort and takes linear time to select the i-th order statistics. The intuition is pretty easy to understand, we just run quicksort but instead of sorting, we keeep deleting the elements around the pivot unless the pivot lands at the i-th position in the statistics, or we don't find it. (**Trivia**: N/2 order statics is median element of an N-array). There is a optional discusion of an deterministic algorithm that also takes linear time to select the i-th order statistics, however I didn't go through it.
+The module starts with selecting i-th order statistics, or in plain english i-th element of an N-element sequence sorted in ascending order. The randomized approach builds on quicksort and takes linear time to select the i-th order statistics. The intuition is pretty easy to understand, we just run quicksort but instead of sorting, we keep deleting the elements around the pivot unless the pivot lands at the i-th position in the statistics, or we don't find it. (**Trivia**: N/2 order statics is median element of an N-array). There is a optional discusion of an deterministic algorithm that also takes linear time to select the i-th order statistics, however I didn't go through it.
 
 [Graph](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>) concepts came easily to me thanks to my prior study of Susanna Epp's Discrete Math. The basic stuff like adjacency lists and matrices was straightforward. But then came the [Minimum cut](<https://en.wikipedia.org/wiki/Cut_(graph_theory)>) problem - whew! This one knocked me down for a while. The goal is simple: split a graph's vertices into two groups while cutting through as few edges as possible.
 
