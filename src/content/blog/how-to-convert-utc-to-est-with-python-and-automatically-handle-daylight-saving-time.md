@@ -1,6 +1,6 @@
 ---
 title: How to Convert UTC to EST with Python and Automatically Handle Daylight Saving Time
-description: Converting between timezones may seem like a straightforward task involving the calculation of the time difference between a location and UTC. However, this is not the case because firstly, timezones are not uniformly divided, and secondly, the daylight saving time (DST) adds further complexity to the process, as it varies depending on the time of the year and location.
+description: Learn how to convert UTC to EST in Python while automatically handling daylight saving time using the pytz library and datetime module.
 pubDatetime: 2023-03-14T00:00:00.000Z
 tags:
   - tutorial

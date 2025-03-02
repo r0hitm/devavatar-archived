@@ -1,6 +1,6 @@
 ---
 title: "GitHub Co-Pilot Review as a Student: Why I am Disabling It"
-description: GitHub Co-Pilot is an AI pair programming assistant developed by GitHub and OpenAI. While its potential to replace developers is a topic of debate, I find that notion far-fetched (for now at least).
+description: While Go-Pilot potential to replace developers is a topic of debate, I find that notion far-fetched (for now at least).
 pubDatetime: 2023-10-05T00:00:00.000Z
 modDatetime: 2024-03-25T04:15:05.284Z
 tags:

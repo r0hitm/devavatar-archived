@@ -1,6 +1,6 @@
 ---
 title: "Subtyping Rules: Enabling Flexibility without Breaking the Type System"
-description: Subtyping is a fundamental concept in static typing that provides flexibility and polymorphism while ensuring soundness in the type system. In any language, subtyping must not break the type system and make it unsound. Therefore, there are certain rules that enables subtyping, namely, width-subtyping, permutation-subtyping, transitiviy-subtyping, and reflexivity.
+description: Subtyping enables polymorphism in static typing through width, permutation, transitivity, and reflexivity rules while preserving type soundness.
 pubDatetime: 2023-05-14T00:00:00.000Z
 modDatetime: 2024-03-25T04:26:28.200Z
 tags:

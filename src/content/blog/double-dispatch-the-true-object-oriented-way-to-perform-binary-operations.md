@@ -1,6 +1,6 @@
 ---
 title: "Double Dispatch: The True Object-Oriented Way to Perform Binary Operations"
-description: In object-oriented programming (OOP), binary operations involve performing operations on two objects of different classes. Suppose we have two classes and there is some method, say `add`, that can add two objects of the same class. Now, suppose we want to extend the `add` class such that these two classes can be added together. However, passing the second class to `add` will not work correctly and might have different properties that `add` did not account for. So how do we do this?
+description: Learn how double dispatch enables objects to interact with different types in true OOP style, handling binary operations.
 pubDatetime: 2023-05-07T00:00:00.000Z
 tags:
   - programming

@@ -1,10 +1,12 @@
 ---
 title: "React + TypeScript + Vite: Configuring ESLint & Prettier for Production-level App"
-description: Integrate ESLint and Prettier in a React + TypeScript project for enhanced code quality and streamlined development. Catch and fix errors earlier while maintaining a consistent code style across all files for improved efficiency!
+description: Learn how to set up ESLint and Prettier in a React + TypeScript Vite project to enhance code quality and maintain consistent coding standards.
 pubDatetime: 2024-03-19T09:30:00Z
+modDatetime: 2025-03-02T16:44:48.590Z
 tags:
   - tutorial
-  - web
+  - react
+  - typescript
 ---
 
 This will be a short post on how to set up linting and (auto-) formatting in a React project that uses Vite as the bundler.

@@ -1,6 +1,6 @@
 ---
 title: "Course Review: Tim Roughgarden's Algorithms: Divide and Conquer, Sorting and Searching, and Randomized Algorithms"
-description: "A comprehensive review of the first course in OSSU Core Theory covering divide-and-conquer algorithms, sorting, and randomized algorithms by Tim Roughgarden on Coursera"
+description: "My review of Tim Roughgarden's Coursera algorithms class covering divide-and-conquer techniques, sorting algorithms, and randomized approaches"
 pubDatetime: 2025-02-20T15:39:32.431Z
 tags:
   - review

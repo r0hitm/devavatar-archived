@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: How to build And Organize Advance X (Twitter) Bot in Python"
-description: "While there are many resources on how to create a twitter bot, but most of them only cover basic bot functionalities. This post will dive into how you can develop a more advanced bot with multiple endpoints and code organization complex logic."
+description: "This post will dive into how you can develop a more advanced bot with multiple endpoints and code organization complex logic."
 pubDatetime: 2024-05-07T14:47:28.273Z
 tags:
   - tutorial

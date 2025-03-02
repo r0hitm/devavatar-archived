@@ -1,6 +1,6 @@
 ---
 title: Dotfile Management Made Easy with GNU Stow
-description: Dotfiles are configuration files that store your preferences and settings for your development tools, applications and customizations. They are very handy when you want to migrate to a new system or restore your old system after a clean installation. You can easily apply your dotfiles and get your familiar environment back. In this post, I will demonstrate a neat way to manage your dotfiles and use git to track and sync them across different computers.
+description: Manage your configuration files using GNU Stow, a symlink farm manager that helps you organize, track, and sync dotfiles across multiple systems.
 pubDatetime: 2023-06-17T00:00:00.000Z
 modDatetime: 2024-03-25T04:17:27.719Z
 tags:
