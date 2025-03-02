@@ -1,6 +1,6 @@
 ---
 title: "Nothing OS 3.0: First Impressions & Disappointment"
-description: "Finally, I got update of Nothing OS 3.0 on my Nothing Phone (2a) Plus. And honestly, after months of waiting and excitement, I am disappointed and very salty. I hope they fix the issues soon."
+description: "My rant about Nothing OS 3.0 update on the Nothing Phone (2a) Plus: missing features, UI glitches, and overall disappointment after months of waiting."
 pubDatetime: 2025-01-03T18:18:02.927Z
 tags:
   - opinion

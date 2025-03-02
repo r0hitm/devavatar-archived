@@ -1,6 +1,6 @@
 ---
 title: "Reflecting on Code for Gov Tech 2023 (India): Preparation Process and Key Takeaways"
-description: My experience with the Code for Gov Tech 2023 (India) preparation process and key takeaways, particularly developing new skill of writing proposals and detailed brainstormed planning for a software project.
+description: My journey preparing for Code for GovTech 2023, focusing on proposal writing skills gained and lessons learned from the application process.
 pubDatetime: 2023-07-13T00:00:00.000Z
 tags:
   - review

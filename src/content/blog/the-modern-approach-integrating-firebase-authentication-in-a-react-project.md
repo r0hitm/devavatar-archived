@@ -1,6 +1,6 @@
 ---
 title: "The Modern Approach: Integrating Firebase Authentication in a React Project"
-description: Comprehensive tutorial on seamlessly incorporating Firebase authentication into a React project, leveraging modern functional, instead of previos class-based, syntax of the Firebase SDK. Uncover the intricacies of this newer syntax, which, despite its benefits, lacks extensive documentation and available resources on the internet at the time of writing.
+description: Learn how to implement Firebase authentication in React using modern functional syntax, with practical examples.
 pubDatetime: 2023-07-09T00:00:00.000Z
 modDatetime: 2024-03-25T04:34:31.411Z
 tags:

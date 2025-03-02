@@ -1,6 +1,6 @@
 ---
 title: "How UBC's How to Code Course Transformed My Approach to Programming"
-description: "My experience with UBC's How to Code course and how it changed the way I approach programming problems now. The point isn't to learn a language. The point is to learn a programming paradigm that transcends language entirely."
+description: "My journey with UBC's programming course that taught me systematic design principles beyond any specific language to solve problems effectively."
 pubDatetime: 2023-02-27T00:00:00.000Z
 modDatetime: 2024-03-25T04:19:56.894Z
 tags:

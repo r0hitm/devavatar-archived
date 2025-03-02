@@ -1,6 +1,6 @@
 ---
 title: "Seeing the Bigger Picture: Why I Reject the Notion of a Favorite Programming Language"
-description: A language-agnostic approach to programming can unlock many opportunities. By applying program design principles and concepts from different languages, developers can craft efficient and elegant solutions. It is important to keep in mind that programming languages are tools we can use, and the language choice should match the problem.
+description: Why choosing programming languages based on the problem at hand, rather than personal preference, leads to more effective and elegant solutions.
 pubDatetime: 2023-06-15T00:00:00.000Z
 modDatetime: 2024-03-25T04:25:36.085Z
 tags:

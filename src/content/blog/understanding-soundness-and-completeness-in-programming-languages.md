@@ -1,6 +1,6 @@
 ---
 title: Understanding Soundness and Completeness in Programming Languages
-description: Static checking is a program analysis technique that is used to check the source code for errors without running it. It helps to detect syntax errors, type errors, and other semantic errors before the program is executed.
+description: Explore how static code analysis ensures program correctness through sound type systems, and the inherent trade-off between soundness and completeness
 pubDatetime: 2023-04-30T00:00:00.000Z
 modDatetime: 2024-03-25T04:37:15.073Z
 tags:

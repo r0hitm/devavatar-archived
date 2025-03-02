@@ -1,6 +1,6 @@
 ---
 title: "Devlog: Moving My Blog from Hashnode to AstroJS"
-description: Devlog on my journey as I share the process of transitioning my technical blog from Hashnode to a custom Astro-built website. Learn from my experiences, including challenges faced, solutions found, and lessons learned along the way. Gain valuable insights for your own blog migration project.
+description: Follow my journey migrating from Hashnode to a custom Astro site, including challenges faced and lessons learned during the transition process.
 pubDatetime: 2024-03-04T15:20:29.169Z
 tags:
   - devlog

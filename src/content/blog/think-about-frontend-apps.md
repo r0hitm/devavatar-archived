@@ -1,8 +1,7 @@
 ---
 title: This is How to Think About Server for a Frontend App
-description: Is not the frontend supposed to run on the client run on the user device? Then why do we have any mention of server in the context of frontend applications?
+description: Learn why frontend applications still need servers to function properly, despite running primarily on the client's device.
 pubDatetime: 2024-06-22T11:07:13.971Z
-draft: false
 tags:
   - web
 ---
