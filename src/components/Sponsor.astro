@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 
 const bmc_text = "Buy me a coffee";
-const bmc_button_color = "ff813f";
+const bmc_button_color = "ff813fcc";
 const bmc_font_color = "fff";
 const bmc_font = "Comic";
 const bmc_outline_color = "000";
@@ -52,13 +52,13 @@ const bmc_img_link =
     @apply mb-3 flex items-center justify-between;
   }
   .sponsors > * {
-    @apply inline-block rounded-lg hover:rotate-3;
+    @apply inline-block rounded-lg transition-all hover:scale-105;
   }
   .bmc-img {
     @apply aspect-auto h-9 rounded-lg;
   }
   .gh-sponsor {
-    @apply flex h-9 w-36 items-center justify-evenly border border-skin-line bg-skin-card px-4 text-sm font-semibold;
+    @apply flex h-8 w-32 items-center justify-evenly bg-skin-card px-2 text-sm font-semibold;
   }
   .gh-sponsor svg {
     @apply stroke-[#ec4899] sm:scale-90 !important;
