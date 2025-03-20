@@ -18,8 +18,7 @@ const { centered = false, showRss = false } = Astro.props;
         href={social.href}
         className="link-button"
         title={social.linkTitle}
-        target="_blank"
-      >
+        target="_blank">
         <Fragment set:html={socialIcons[social.name]} />
         <span class="sr-only">{social.linkTitle}</span>
       </LinkButton>
@@ -32,8 +31,7 @@ const { centered = false, showRss = false } = Astro.props;
         href="/rss.xml"
         className="rss-link link-button"
         aria-label="RSS Feed"
-        title="RSS Feed"
-      >
+        title="RSS Feed">
         <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon scale-110">
           <>
             <path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z" />
@@ -52,6 +50,6 @@ const { centered = false, showRss = false } = Astro.props;
     @apply flex-wrap justify-center gap-1;
   }
   .link-button {
-    @apply p-2 hover:rotate-6 sm:p-1 transition-all ease-in;
+    @apply p-2 transition-all ease-in hover:scale-105 sm:p-1;
   }
 </style>
