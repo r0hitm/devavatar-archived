@@ -5,12 +5,14 @@ import { BlueskyComments } from "bluesky-comments";
 const emptyState = "No comments yet";
 ---
 
-<section class="mx-auto mt-4 w-full max-w-3xl px-4 pb-12">
-  <BlueskyComments
-    client:load
-    author="devavatar.com"
-    uri=""
-    emptyState={emptyState}
-    commentFilters={[]}
-  />
+<section class="mx-auto w-full max-w-3xl p-4">
+  <div class="mr-auto h-fit w-fit">
+    <BlueskyComments
+      client:load
+      author="devavatar.com"
+      uri=""
+      emptyState={emptyState}
+      commentFilters={[]}
+    />
+  </div>
 </section>
