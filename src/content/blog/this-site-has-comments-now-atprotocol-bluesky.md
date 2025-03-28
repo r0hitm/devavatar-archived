@@ -9,11 +9,11 @@ tags:
 ---
 
 I always wanted to add comments to my blog posts, but seeing most of the 3rd party solutions are not free or a privacy nightmare,
-I never did. Until I discoverd about Bluesky and its open [AT protocol](https://atproto.com). Bluesky is built on this protocol. (I recommend reading [Benefits of an open network](https://emilyliu.me/blog/open-network) to understand what does this means). Tldr; because of the way the protocol works, we can use it as a comment system for any blog!
+I never did. Until I discovered about Bluesky and its open [AT protocol](https://atproto.com). Bluesky is built on this protocol. (I recommend reading [Benefits of an open network](https://emilyliu.me/blog/open-network) to understand what this means). Tldr; because of the way the protocol works, we can use it as a comment system for any blog!
 
-The comments are hosted on the network itself! And I am pulling from the post that links to this blogpost for the likes, reposts, replies. My implemenation uses [Cory's component](https://github.com/czue/bluesky-comments), and initilized with author name.
+The comments are hosted on the network itself! And I am pulling from the post that links to this blogpost for the likes, reposts, replies. My implementation uses [Cory's component](https://github.com/czue/bluesky-comments), and initialized with author name.
 
-My site is built using Astrojs, and there was a missing type declartion for the `bluesky-comments` package, and linters were screeming at my face. If you face somethign similar put the following in a new `.d.ts` file:
+My site is built using Astrojs, and there was a missing type declaration for the `bluesky-comments` package, and linters were screaming at my face. If you face something similar put the following in a new `.d.ts` file:
 
 ```ts
 // env.d.ts
