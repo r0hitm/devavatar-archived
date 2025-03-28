@@ -2,51 +2,51 @@
 import LinkButton from "./LinkButton.astro";
 import socialIcons from "@assets/socialIcons";
 
-const URL = Astro.url;
+// const URL = Astro.url;
 
-const shareLinks = [
-  {
-    name: "WhatsApp",
-    href: "https://wa.me/?text=",
-    linkTitle: `WhatsApp`,
-  },
-  // {
-  //   name: "Facebook",
-  //   href: "https://www.facebook.com/sharer.php?u=",
-  //   linkTitle: `Facebook`,
-  // },
-  {
-    name: "Bluesky",
-    href: "https://bsky.app/intent/compose?text=Check%20out%20this%20amazing%20post%21%20",
-    linkTitle: `Share on Bluesky`,
-  },
-  {
-    name: "X",
-    href: "https://twitter.com/intent/tweet?via=_r0hitm%20&url=",
-    linkTitle: `X (Twitter)`,
-  },
-  // {
-  //   name: "Telegram",
-  //   href: "https://t.me/share/url?url=",
-  //   linkTitle: `Telegram`,
-  // },
-  // {
-  //   name: "Pinterest",
-  //   href: "https://pinterest.com/pin/create/button/?url=",
-  //   linkTitle: `Pinterest`,
-  // },
-  {
-    name: "Mail",
-    href: "mailto:?subject=See%20this%20post&body=",
-    linkTitle: `Email`,
-  },
-] as const;
+// const shareLinks = [
+//   {
+//     name: "WhatsApp",
+//     href: "https://wa.me/?text=",
+//     linkTitle: `WhatsApp`,
+//   },
+//   // {
+//   //   name: "Facebook",
+//   //   href: "https://www.facebook.com/sharer.php?u=",
+//   //   linkTitle: `Facebook`,
+//   // },
+//   {
+//     name: "Bluesky",
+//     href: "https://bsky.app/intent/compose?text=Check%20out%20this%20amazing%20post%21%20",
+//     linkTitle: `Share on Bluesky`,
+//   },
+//   {
+//     name: "X",
+//     href: "https://twitter.com/intent/tweet?via=_r0hitm%20&url=",
+//     linkTitle: `X (Twitter)`,
+//   },
+//   // {
+//   //   name: "Telegram",
+//   //   href: "https://t.me/share/url?url=",
+//   //   linkTitle: `Telegram`,
+//   // },
+//   // {
+//   //   name: "Pinterest",
+//   //   href: "https://pinterest.com/pin/create/button/?url=",
+//   //   linkTitle: `Pinterest`,
+//   // },
+//   {
+//     name: "Mail",
+//     href: "mailto:?subject=See%20this%20post&body=",
+//     linkTitle: `Email`,
+//   },
+// ] as const;
 ---
 
 <div class={`social-icons`}>
-  <span class="italic">Share this:</span>
+  <!-- <span class="italic">Share this:</span> -->
   <div class="text-center">
-    {
+    <!-- {
       shareLinks.map(social => (
         <LinkButton
           href={`${social.href + URL}`}
@@ -57,8 +57,9 @@ const shareLinks = [
           <span class="sr-only">{social.linkTitle}</span>
         </LinkButton>
       ))
-    }
+    } -->
     <!-- Share (via system navigator share) -->
+    <span class="italic">Share this:</span>
     <button
       class="link-button group inline-block hover:text-skin-accent"
       title="Share"
