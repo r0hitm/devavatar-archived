@@ -1,17 +1,11 @@
 ---
-import Hr from "./Hr.astro";
 import "bluesky-comments/bluesky-comments.css";
 import { BlueskyComments } from "bluesky-comments";
 
 const emptyState = "No comments yet";
 ---
 
-<section class="mx-auto mt-6 w-full max-w-3xl px-4 pb-12">
-  <Hr noPadding />
-  <!-- <h2 class="mt-4 text-xl font-bold" id="comments-head">Comments</h2>
-  <span class="mb-4 text-sm text-gray-500">
-    Join the conversation by replying on Bluesky.
-  </span> -->
+<section class="mx-auto mt-4 w-full max-w-3xl px-4 pb-12">
   <BlueskyComments
     client:load
     author="devavatar.com"
