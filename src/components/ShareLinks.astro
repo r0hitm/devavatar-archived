@@ -59,13 +59,13 @@ import socialIcons from "@assets/socialIcons";
       ))
     } -->
     <!-- Share (via system navigator share) -->
-    <span class="italic">Share this:</span>
     <button
-      class="link-button group inline-block hover:text-skin-accent"
+      class="group inline-block transition-opacity hover:opacity-75"
       title="Share"
       id="share-button">
+      <span>Share this</span>
       <Fragment set:html={socialIcons["Share"]} />
-      <span class="sr-only">Share</span>
+      <!-- <span class="sr-only">Share</span> -->
     </button>
   </div>
 </div>
@@ -74,9 +74,9 @@ import socialIcons from "@assets/socialIcons";
   .social-icons {
     @apply flex flex-col flex-wrap items-center justify-center gap-1 sm:items-start;
   }
-  .link-button {
+  /* .link-button {
     @apply scale-90 p-2 transition-all hover:scale-105 sm:p-1;
-  }
+  } */
 </style>
 
 <script>
