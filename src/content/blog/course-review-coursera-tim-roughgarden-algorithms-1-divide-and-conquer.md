@@ -2,6 +2,7 @@
 title: "Course Review: Tim Roughgarden's Algorithms: Divide and Conquer, Sorting and Searching, and Randomized Algorithms"
 description: "My review of Tim Roughgarden's Coursera algorithms class covering divide-and-conquer techniques, sorting algorithms, and randomized approaches"
 pubDatetime: 2025-02-20T15:39:32.431Z
+modDatetime: 2025-03-30T16:19:22.416Z
 tags:
   - review
   - algorithms
@@ -80,5 +81,7 @@ This course provides a solid foundation in algorithm design and analysis. The di
 This is primarily a theoretical course - you'll spend more time analyzing algorithms and proving their correctness than implementing them. When you do code, you can use any programming language you're comfortable with.
 
 I'm looking forward to the next course in the series, [Graph Search, Shortest Paths, and Data Structures](https://www.coursera.org/learn/algorithms-graphs-data-structures). Until next time, keep analyzing! 🤓
+
+**Update**: Completed the second course! [Review blogpost is here](/posts/course-review-coursera-tim-roughgarden-algorithms-2-graph-data-structure).
 
 ![anime mouse drag](https://media1.tenor.com/m/d79toO9-OsAAAAAC/typing-computer.gif)
