@@ -29,10 +29,9 @@ My approach _involved_ a function that would take a board state and recursively 
 
 Early development hit several snags:
 
-- My recursive simulation logic got stuck in infinite loops when the maximum depth was greater than 1.
-- The end states being generated weren't correct according to the examples.
 - Debugging revealed a faulty `play_move()` function – it wasn't correctly updating the board, leading to generated states being identical to the starting one.
-- Later, I found a particularly silly mistake: I was assigning `0` instead of the player's ID (`1` or `2`) when simulating a non-capture move, completely messing up the board state logic.
+- Later, I found a particularly silly mistake: I was assigning `0` instead of the move value (`1-6`) when simulating a non-capture move, completely messing up the board state logic.
+- Performance was good and code was correctly passing the first four tests.
 
 ## Optimization Attempts and Roadblocks
 
