@@ -5,6 +5,7 @@ pubDatetime: 2024-10-19T17:53:48.595Z
 modDatetime: 2024-10-21T16:25:46.866Z
 tags:
   - tutorial
+  - windows
 ---
 
 I'm sick of the fact that Windows keeps adding bloatware and unnecessary "AI" features like Copilot and Recall 🗑️. If you're fed up too, let's walk through how to clean it all up! Or switch to Linux (no pressure!) 😉
