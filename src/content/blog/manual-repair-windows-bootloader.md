@@ -11,8 +11,6 @@ description: "Cannot boot Windows? Broken EFI partition? Repair it without doing
 Bricked your EFI partition, or stuck in a boot loop for whatever reason, resulting in Windows failing to boot? And even Windows Startup Repair seems to need repairing itself? Well, at this point, the
 straightforward way to fix it would be to do a reinstall. However, that's often overkill. Try this method to manually repair the Windows bootloader:
 
-<!-- ## Table of Contents -->
-
 1. Boot into the Windows installation media.
 2. Press `Shift + F10` to open the command prompt.
 3. Run `diskpart`.
