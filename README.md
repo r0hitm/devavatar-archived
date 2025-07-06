@@ -1,6 +1,6 @@
 # Dev Avatar - Archived
 
-[![Archived](https://img.shields.io/badge/Archived-212121?style=for-the-badge&logo=git-archive&logoColor=white)](https://github.com/kaiseix/devavatar/)
+![Archived](https://img.shields.io/badge/Archived-212121?style=for-the-badge&logo=git-archive&logoColor=white)
 
 ⚠️ This is the old source code of devavatar.com ⚠️
 
